@@ -1,10 +1,14 @@
 import './globals.css';
-import { Inter } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import type React from 'react';
 import type { Metadata } from 'next';
 import MouseMoveEffect from '@/components/mouse-move-effect';
 
-const inter = Inter({ subsets: ['latin'] });
+const roboto = Roboto({
+    weight: '400',
+    subsets: ['latin'],
+})
+   
 
 export const metadata: Metadata = {
     title: 'SPUR Capital - Spurring the Future Funding of Decentralized Smart City Infrastructure ',
@@ -20,7 +24,7 @@ export default function RootLayout({
     return (
         <html lang="en" className="dark">
             <body
-                className={`${inter.className} bg-background text-foreground antialiased`}
+                className={`${roboto.className} bg-background text-foreground antialiased`}
             >
                 <MouseMoveEffect />
                 {children}
