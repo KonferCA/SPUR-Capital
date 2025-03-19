@@ -341,17 +341,17 @@ export default function AboutPage() {
                                     <div className="space-y-4">
                                         <div className="flex items-center gap-4">
                                             <Badge className="bg-branding-orange/20 text-branding-orange border-branding-orange/30">Phase 1</Badge>
-                                            <p className="text-branding-white/80">Ontario</p>
+                                            <p className="text-branding-white/80">North America</p>
                                         </div>
 
                                         <div className="flex items-center gap-4">
                                             <Badge className="bg-branding-orange/20 text-branding-orange border-branding-orange/30">Phase 2</Badge>
-                                            <p className="text-branding-white/80">Canada</p>
+                                            <p className="text-branding-white/80">EU / Middle East</p>
                                         </div>
 
                                         <div className="flex items-center gap-4">
                                             <Badge className="bg-branding-orange/20 text-branding-orange border-branding-orange/30">Phase 3</Badge>
-                                            <p className="text-branding-white/80">North America</p>
+                                            <p className="text-branding-white/80">Asia Pacific</p>
                                         </div>
                                     </div>
                                 </CardContent>
@@ -371,12 +371,12 @@ export default function AboutPage() {
 
                                         <div className="flex items-start gap-4">
                                             <MapPin className="h-5 w-5 text-branding-orange mt-1" />
-                                            <p className="text-branding-white/80">Mirabel, Quebec, Canada</p>
+                                            <p className="text-branding-white/80">Lewes, Delaware, USA</p>
                                         </div>
 
                                         <div className="flex items-start gap-4">
                                             <MapPin className="h-5 w-5 text-branding-orange mt-1" />
-                                            <p className="text-branding-white/80">Kitchener, Ontario, Canada</p>
+                                            <p className="text-branding-white/80">Dubai, UAE</p>
                                         </div>
                                     </div>
                                 </CardContent>
