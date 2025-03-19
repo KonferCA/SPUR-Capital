@@ -13,7 +13,14 @@ const roboto = Roboto({
 export const metadata: Metadata = {
     title: 'SPUR Capital - Spurring the Future Funding of Decentralized Smart City Infrastructure ',
     description:
-        'Amane Soft delivers innovative, high-performance software solutions for businesses of the future.',
+        'SPUR is redefining how cities implement smart infrastructure with decentralized funding models and sustainable technology solutions.',
+    keywords: [
+        'SPUR Capital',
+        'SPUR Innovation',
+        'SPUR',
+        'SPUR Innovation Center',
+        'SPURIC',
+    ],
 };
 
 export default function RootLayout({
