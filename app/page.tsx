@@ -3,7 +3,7 @@ import Hero from '@/components/hero';
 import Vision from '@/components/vision';
 import About from '@/components/about';
 import Assets from '@/components/assets';
-import Cities from '@/components/cities';
+import Locations from '@/components/locations';
 import Partners from '@/components/partners';
 import CTA from '@/components/cta';
 import Footer from '@/components/footer';
@@ -23,7 +23,7 @@ export default function Home() {
                 <About />
                 <Vision />
                 <Assets />
-                <Cities />
+                <Locations />
                 <Partners />
                 <CTA />
                 <Footer />
