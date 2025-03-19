@@ -9,8 +9,8 @@ import { Linkedin, Twitter, Menu, X, ChevronDown } from 'lucide-react';
 import SpurLogo from './spur-logo';
 
 const navLinks = [
-    { 
-        name: 'About', 
+    {
+        name: 'About',
         path: '/about',
         scrollTo: 'about',
         dropdown: [
@@ -19,13 +19,13 @@ const navLinks = [
             { name: 'Our Plans', path: '/about#overview' },
         ]
     },
-    { 
-        name: 'Vision', 
+    {
+        name: 'Vision',
         path: '/',
         scrollTo: 'vision',
     },
-    { 
-        name: 'Assets', 
+    {
+        name: 'Assets',
         path: '/assets',
         scrollTo: 'assets',
         dropdown: [
@@ -36,13 +36,13 @@ const navLinks = [
             { name: 'Financial Projections', path: '/assets#projections' },
         ]
     },
-    { 
-        name: 'Locations', 
+    {
+        name: 'Locations',
         path: '/',
         scrollTo: 'locations',
     },
-    { 
-        name: 'Partners', 
+    {
+        name: 'Partners',
         path: '/partners',
         scrollTo: 'partners',
         dropdown: [
@@ -60,7 +60,7 @@ export default function Navbar() {
     const [scrolled, setScrolled] = useState(false);
     const [expandedItem, setExpandedItem] = useState<string | null>(null);
     const [openDesktopDropdown, setOpenDesktopDropdown] = useState<string | null>(null);
-  
+
     useEffect(() => {
         const handleScroll = () => {
             const position = window.scrollY;
@@ -75,12 +75,12 @@ export default function Navbar() {
 
     useEffect(() => {
         if (pathname === '/') {
-            const hash = window.location.hash.substring(1); 
-            
+            const hash = window.location.hash.substring(1);
+
             if (hash) {
                 setTimeout(() => {
                     const element = document.getElementById(hash);
-                    
+
                     if (element) {
                         element.scrollIntoView({ behavior: 'smooth', block: 'start' });
                     }
@@ -104,7 +104,7 @@ export default function Navbar() {
     useEffect(() => {
         const handleClickOutside = (event: MouseEvent) => {
             if (
-                openDesktopDropdown && 
+                openDesktopDropdown &&
                 !(event.target as HTMLElement).closest('.desktop-dropdown-container')
             ) {
                 setOpenDesktopDropdown(null);
@@ -117,7 +117,7 @@ export default function Navbar() {
             document.removeEventListener('mousedown', handleClickOutside);
         };
     }, [openDesktopDropdown]);
-  
+
     const toggleMobileMenu = () => {
         setMobileMenuOpen(!mobileMenuOpen);
     };
@@ -139,7 +139,7 @@ export default function Navbar() {
     const handleSectionNavigation = (sectionId: string) => {
         if (pathname === '/') {
             const element = document.getElementById(sectionId);
-            
+
             if (element) {
                 element.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
@@ -147,17 +147,17 @@ export default function Navbar() {
             handleLinkClick();
         } else {
             router.push(`/#${sectionId}`);
-            
+
             handleLinkClick();
         }
     };
-  
+
     return (
-        <header 
+        <header
             className={cn(
                 "fixed top-0 z-40 w-full border-b border-branding-white/10 transition-all duration-300",
-                scrolled 
-                    ? "bg-background/90 backdrop-blur-md" 
+                scrolled
+                    ? "bg-background/90 backdrop-blur-md"
                     : "bg-background/50 backdrop-blur-sm"
             )}
         >
@@ -167,7 +167,7 @@ export default function Navbar() {
 
                     <span className="font-bold text-xl hidden sm:inline text-branding-white">SPUR Innovation</span>
                 </Link>
-            
+
                 <div className="hidden lg:flex items-center space-x-4">
                     <div className="flex items-center">
                         {navLinks.map((link) => (
@@ -175,7 +175,7 @@ export default function Navbar() {
                                 {link.path === '/' ? (
                                     link.dropdown && link.dropdown.length > 0 ? (
                                     <>
-                                        <button 
+                                        <button
                                             className={cn(
                                                 "flex items-center h-10 px-4 text-base font-medium rounded-md text-branding-white hover:text-branding-orange focus:outline-none"
                                             )}
@@ -188,7 +188,7 @@ export default function Navbar() {
                                                 openDesktopDropdown === link.name && "rotate-180"
                                             )} />
                                         </button>
-                                        
+
                                         <div className={cn(
                                         "absolute left-0 mt-1 w-56 rounded-md shadow-lg transition-all duration-200 z-50",
                                         openDesktopDropdown === link.name ? "opacity-100 visible" : "opacity-0 invisible"
@@ -200,9 +200,9 @@ export default function Navbar() {
                                             >
                                             Overview
                                             </button>
-                                            
+
                                             <div className="my-1 h-px w-full bg-branding-white/10" />
-                                            
+
                                             {link.dropdown.map((item) => (
                                             <Link
                                                 key={item.name}
@@ -229,7 +229,7 @@ export default function Navbar() {
                             ) : (
                                 link.dropdown && link.dropdown.length > 0 ? (
                                 <>
-                                    <button 
+                                    <button
                                     className={cn(
                                         "flex items-center h-10 px-4 text-base font-medium rounded-md text-branding-white hover:text-branding-orange focus:outline-none"
                                     )}
@@ -242,7 +242,7 @@ export default function Navbar() {
                                         openDesktopDropdown === link.name && "rotate-180"
                                     )} />
                                     </button>
-                                    
+
                                     <div className={cn(
                                     "absolute left-0 mt-1 w-56 rounded-md shadow-lg transition-all duration-200 z-50",
                                     openDesktopDropdown === link.name ? "opacity-100 visible" : "opacity-0 invisible"
@@ -254,9 +254,9 @@ export default function Navbar() {
                                         >
                                         Overview
                                         </button>
-                                        
+
                                         <div className="my-1 h-px w-full bg-branding-white/10" />
-                                        
+
                                         {link.dropdown.map((item) => (
                                         <Link
                                             key={item.name}
@@ -285,15 +285,15 @@ export default function Navbar() {
                             </div>
                         ))}
                     </div>
-                    
+
                     <div className="flex items-center space-x-4 ml-4">
                     <Link
                         href="https://linkedin.com/company/spur-innovation-center"
                         target="_blank"
                         rel="noreferrer"
                     >
-                        <Button 
-                        variant="ghost" 
+                        <Button
+                        variant="ghost"
                         size="icon"
                         className="p-2 bg-branding-orange/10 rounded-full text-branding-orange hover:bg-branding-orange/20 transition-colors"
                         >
@@ -312,20 +312,30 @@ export default function Navbar() {
                         <span className="sr-only">Twitter</span>
                     </Link>
 
-                    <Button 
-                        variant="default" 
+                    <Button
+                        variant="default"
                         size="default"
                         className="bg-branding-orange hover:bg-branding-orange/90 text-branding-white font-medium px-6"
                     >
                         <a href="mailto:info@spur.com">
-                            Contact Us
-                        </a> 
+                            Contact
+                        </a>
+                    </Button>
+
+                    <Button
+                        variant="outline"
+                        size="default"
+                        className="bg-branding-darkBlue hover:bg-branding-lightBlue text-branding-white font-medium px-6"
+                    >
+                        <a href="https://onboard.spuric.com">
+                            Onboard
+                        </a>
                     </Button>
                     </div>
                 </div>
-            
-            <Button 
-                variant="ghost" 
+
+            <Button
+                variant="ghost"
                 size="icon"
                 className="lg:hidden z-50 hover:bg-branding-lightBlue/10 text-branding-white"
                 onClick={toggleMobileMenu}
@@ -335,8 +345,8 @@ export default function Navbar() {
                 <span className="sr-only">Toggle Menu</span>
             </Button>
             </div>
-            
-            <div 
+
+            <div
             className={cn(
                 "fixed inset-0 top-0 z-40 bg-black/95 backdrop-blur-lg lg:hidden overflow-y-auto transition-transform duration-300 ease-in-out",
                 mobileMenuOpen ? "translate-x-0" : "translate-x-full"
@@ -348,8 +358,8 @@ export default function Navbar() {
                 <SpurLogo className="h-10 w-10" />
                 <span className="font-bold text-xl text-branding-white">SPUR Innovation</span>
                 </Link>
-                <Button 
-                variant="ghost" 
+                <Button
+                variant="ghost"
                 size="icon"
                 className="hover:bg-branding-lightBlue/10 text-branding-white"
                 onClick={toggleMobileMenu}
@@ -358,7 +368,7 @@ export default function Navbar() {
                 <X className="h-6 w-6" />
                 </Button>
             </div>
-            
+
             <div className="container mx-auto px-4 py-8 flex flex-col h-[calc(100vh-5rem)] overflow-y-auto">
                 <nav className="flex flex-col space-y-0 text-lg font-medium">
                 {navLinks.map((link) => (
@@ -372,7 +382,7 @@ export default function Navbar() {
                             >
                             {link.name}
                             </button>
-                            
+
                             {link.dropdown && link.dropdown.length > 0 && (
                             <Button
                                 variant="ghost"
@@ -387,7 +397,7 @@ export default function Navbar() {
                             </Button>
                             )}
                         </div>
-                        
+
                         {expandedItem === link.name && link.dropdown && (
                             <div className="pl-4 py-2 space-y-1 text-base border-t border-branding-white/5">
                             <button
@@ -396,7 +406,7 @@ export default function Navbar() {
                             >
                                 Overview
                             </button>
-                            
+
                             {link.dropdown.map((item) => (
                                 <Link
                                 key={item.name}
@@ -420,7 +430,7 @@ export default function Navbar() {
                             >
                             {link.name}
                             </Link>
-                            
+
                             {link.dropdown && link.dropdown.length > 0 && (
                             <Button
                                 variant="ghost"
@@ -435,7 +445,7 @@ export default function Navbar() {
                             </Button>
                             )}
                         </div>
-                        
+
                         {expandedItem === link.name && link.dropdown && (
                             <div className="pl-4 py-2 space-y-1 text-base border-t border-branding-white/5">
                             <button
@@ -444,7 +454,7 @@ export default function Navbar() {
                             >
                                 Overview
                             </button>
-                            
+
                             {link.dropdown.map((item) => (
                                 <Link
                                 key={item.name}
@@ -462,7 +472,7 @@ export default function Navbar() {
                     </div>
                 ))}
                 </nav>
-                
+
                 <div className="mt-auto pt-8 flex flex-col space-y-6">
                 <Link
                     href="https://linkedin.com/company/spur-innovation-center"
@@ -474,7 +484,7 @@ export default function Navbar() {
                     <Linkedin className="h-6 w-6" />
                     <span>Follow us on LinkedIn</span>
                 </Link>
-                
+
                 <Link
                     href="https://twitter.com/SpurInnovation"
                     target="_blank"
@@ -486,8 +496,8 @@ export default function Navbar() {
                     <span>Follow us on Twitter</span>
                 </Link>
 
-                <Button 
-                    variant="default" 
+                <Button
+                    variant="default"
                     size="lg"
                     className="bg-branding-orange hover:bg-branding-orange/90 text-branding-white font-medium w-full text-lg py-6"
                     onClick={handleLinkClick}
