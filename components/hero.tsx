@@ -27,7 +27,7 @@ export default function Hero() {
             <div className="container relative z-10 px-4 mx-auto pb-16 sm:pb-20 lg:ml-32">
                 <div className="flex flex-col-reverse lg:flex-row items-center justify-between gap-8 lg:gap-8">
                     <div className="w-full lg:w-3/5 space-y-6 lg:space-y-8 text-center lg:text-left">
-                        <Badge className="inline-flex bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
+                        <Badge className="inline-flex bg-branding-orange/20 text-branding-orange border border-branding-orange/30 hover:bg-branding-orange/30 px-3 py-1 sm:px-4 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
                             Revolutionizing Data Infrastructure
                         </Badge>
                         
