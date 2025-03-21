@@ -2,13 +2,12 @@
 
 import { Building2, Factory, Server, Warehouse, MapPin, ArrowRight, Users } from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
-import { Button } from '@/components/ui/button';
 import { Card, CardContent } from '@/components/ui/card';
 import SectionWrapper from './section-wrapper';
 import Image from 'next/image';
 import useEmblaCarousel from 'embla-carousel-react';
 import Autoplay from 'embla-carousel-autoplay';
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
 import WaterlooCampus1 from '@/public/assets/waterloo-campus-1.jpg';
 import WaterlooCampus2 from '@/public/assets/waterloo-campus-2.jpg';
@@ -39,90 +38,6 @@ const waterlooImages = [
     WaterlooCampus12,
     WaterlooCampus13
 ];
-
-function CampusCarousel() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ 
-        loop: true,
-        align: 'center',
-        slidesToScroll: 1
-    }, [Autoplay({ delay: 3000, stopOnInteraction: false })]);
-    
-    const [selectedIndex, setSelectedIndex] = useState(0);
-
-    const scrollPrev = useCallback(() => {
-        if (emblaApi){
-            emblaApi.scrollPrev();
-        }
-    }, [emblaApi]);
-
-    const scrollNext = useCallback(() => {
-        if (emblaApi) {
-            emblaApi.scrollNext();
-        } 
-    }, [emblaApi]);
-    
-    const scrollTo = useCallback((index: number) => {
-        if (emblaApi) {
-            emblaApi.scrollTo(index);
-        }
-    }, [emblaApi]);
-    
-    useEffect(() => {
-        if (!emblaApi) return;
-        
-        const onSelect = () => {
-            setSelectedIndex(emblaApi.selectedScrollSnap());
-        };
-        
-        emblaApi.on('select', onSelect);
-
-        onSelect();
-        
-        return () => {
-            emblaApi.off('select', onSelect);
-        };
-    }, [emblaApi]);
-
-    return (
-        <div className="relative w-full h-80 rounded-xl overflow-hidden border border-branding-white/10">
-            <div className="overflow-hidden h-full w-full" ref={emblaRef}>
-                <div className="flex h-full">
-                    {waterlooImages.map((src, index) => (
-                        <div className="relative flex-[0_0_100%] h-full" key={index}>
-                            <Image
-                                src={src}
-                                alt={`Waterloo Campus View ${index + 1}`}
-                                fill
-                                sizes="(max-width: 768px) 100vw, 50vw"
-                                className="object-cover"
-                                priority={index < 2}
-                            />
-                        </div>
-                    ))}
-                </div>
-            </div>
-            
-            <div className="absolute bottom-2 left-0 right-0 flex justify-center space-x-1.5 z-20 pointer-events-none">
-                {waterlooImages.map((_, index) => (
-                    <button
-                        key={index}
-                        className={`w-3 h-3 rounded-full transition-colors pointer-events-auto ${
-                            selectedIndex === index 
-                                ? "bg-branding-orange" 
-                                : "bg-white/30 hover:bg-white/50"
-                        }`}
-                        onClick={(e) => {
-                            e.preventDefault();
-                            e.stopPropagation();
-                            scrollTo(index);
-                        }}
-                        aria-label={`Go to slide ${index + 1}`}
-                    />
-                ))}
-            </div>
-        </div>
-    );
-}
 
 const cities = [
     {
@@ -167,6 +82,72 @@ const cities = [
         description: 'Strategically positioned facility with excellent connectivity to western markets.'
     },
 ];
+
+function CampusCarousel() {
+    const [emblaRef, emblaApi] = useEmblaCarousel({ 
+        loop: true,
+        align: 'center',
+        slidesToScroll: 1
+    }, [Autoplay({ delay: 3000, stopOnInteraction: false })]);
+    
+    const [_, setSelectedIndex] = useState(0);
+    
+    useEffect(() => {
+        if (!emblaApi) return;
+        
+        const onSelect = () => {
+            setSelectedIndex(emblaApi.selectedScrollSnap());
+        };
+        
+        emblaApi.on('select', onSelect);
+
+        onSelect();
+        
+        return () => {
+            emblaApi.off('select', onSelect);
+        };
+    }, [emblaApi]);
+
+    return (
+        <div className="relative w-full h-80 rounded-xl overflow-hidden border border-branding-white/10">
+            <div className="overflow-hidden h-full w-full" ref={emblaRef}>
+                <div className="flex h-full">
+                    {waterlooImages.map((src, index) => (
+                        <div className="relative flex-[0_0_100%] h-full" key={index}>
+                            <Image
+                                src={src}
+                                alt={`Waterloo Campus View ${index + 1}`}
+                                fill
+                                sizes="(max-width: 768px) 100vw, 50vw"
+                                className="object-cover"
+                                priority={index < 2}
+                            />
+                        </div>
+                    ))}
+                </div>
+            </div>
+            
+            <div className="absolute bottom-2 left-0 right-0 flex justify-center space-x-1.5 z-20 pointer-events-none">
+                {waterlooImages.map((_, index) => (
+                    <button
+                        key={index}
+                        className={`w-3 h-3 rounded-full transition-colors pointer-events-auto ${
+                            emblaApi?.selectedScrollSnap() === index 
+                                ? "bg-branding-orange" 
+                                : "bg-white/30 hover:bg-white/50"
+                        }`}
+                        onClick={(e) => {
+                            e.preventDefault();
+                            e.stopPropagation();
+                            emblaApi?.scrollTo(index)
+                        }}
+                        aria-label={`Go to slide ${index + 1}`}
+                    />
+                ))}
+            </div>
+        </div>
+    );
+}
 
 const featuredCity = cities.find(city => city.name === 'Kitchener / Waterloo Region');
 const otherCities = cities.filter(city => city.name !== 'Kitchener / Waterloo Region');
@@ -310,7 +291,6 @@ export default function Locations() {
                                                 </div>
                                             </div>
                                             
-                                            {/* Campus View Carousel */}
                                             <div className="mt-6">
                                                 <h4 className="text-sm font-medium text-branding-white/90 mb-3">
                                                     Campus Views
