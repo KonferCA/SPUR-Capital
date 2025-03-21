@@ -378,16 +378,14 @@ export default function PartnershipsPage() {
                             
                             <div className="flex flex-col sm:flex-row gap-4 justify-center pt-4">
                                 <Button 
-                                    className="bg-branding-orange hover:bg-branding-orange/90 text-branding-white group text-lg px-8 py-6"
+                                    className="bg-branding-orange hover:bg-branding-orange/90 text-branding-white group text-base sm:text-lg px-4 sm:px-8 py-4 sm:py-6 flex items-center justify-center w-full sm:w-auto"
                                 >
-                                    Submit Partnership Proposal
-                                    <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                                </Button>
-                                
-                                <Button 
-                                    className="bg-transparent border border-branding-white/20 hover:border-branding-white/40 text-branding-white group text-lg px-8 py-6"
-                                >
-                                    Download Partnership Information
+                                    <a
+                                        href="mailto:partners@spuric.com"
+                                    >
+                                        Connect with Us
+                                    </a>
+                                    <ArrowRight className="ml-2 h-5 w-5 flex-shrink-0 transition-transform group-hover:translate-x-1" />
                                 </Button>
                             </div>
                             
