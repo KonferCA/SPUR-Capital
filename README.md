@@ -11,7 +11,7 @@
                                                  
   ![GitHub](https://img.shields.io/github/license/KonferCA/SPUR-Landing?style=flat-square)
   
-  #### The official landing page for SPUR Capital - see [here](https://spuric.com).
+  #### The official landing page for SPUR Capital - see [here](https://capital.spuric.com).
 </div>
 
 ## Quick Setup :hammer:
