@@ -322,13 +322,13 @@ export default function Navbar() {
                             size="default"
                             className="border border-branding-orange hover:bg-branding-orange text-branding-white font-medium px-6"
                         >
-                            <Link 
-                                href="onboard.spuric.com"
+                            <a 
+                                href="https://onboard.spuric.com"
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
                                 Onboard
-                            </Link>
+                            </a>
                         </Button>
 
                         <Button
@@ -521,13 +521,13 @@ export default function Navbar() {
                             size="default"
                             className="border border-branding-orange hover:bg-branding-orange text-branding-white text-lg py-6"
                         >
-                            <Link 
-                                href="onboard.spuric.com"
+                            <a 
+                                href="https://onboard.spuric.com"
                                 rel="noopener noreferrer"
                                 target="_blank"
                             >
                                 Onboard
-                            </Link>
+                            </a>
                         </Button>
 
                         <Button
