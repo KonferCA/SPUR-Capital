@@ -30,6 +30,27 @@ const carouselImages = [
     Carousel8,
 ];
 
+const features = [
+    {
+        icon: Server,
+        title: 'Data Center Expertise',
+        badge: 'Core',
+        description: 'Specializing in cutting-edge data center infrastructure for advanced technologies.',
+    },
+    {
+        icon: Cpu,
+        title: 'AI & Quantum Computing',
+        badge: 'Innovation',
+        description: 'Driving innovation in AI and quantum computing with state-of-the-art facilities.',
+    },
+    {
+        icon: BarChart4,
+        title: 'High Performance',
+        badge: 'Efficiency',
+        description: 'Delivering high-performance solutions for modern computing demands.',
+    },
+];
+
 function ImageCarousel() {
     const [emblaRef, emblaApi] = useEmblaCarousel({ 
         loop: true,
@@ -90,28 +111,7 @@ function ImageCarousel() {
             </div>
         </div>
     );
-}
-
-const features = [
-    {
-        icon: Server,
-        title: 'Data Center Expertise',
-        badge: 'Core',
-        description: 'Specializing in cutting-edge data center infrastructure for advanced technologies.',
-    },
-    {
-        icon: Cpu,
-        title: 'AI & Quantum Computing',
-        badge: 'Innovation',
-        description: 'Driving innovation in AI and quantum computing with state-of-the-art facilities.',
-    },
-    {
-        icon: BarChart4,
-        title: 'High Performance',
-        badge: 'Efficiency',
-        description: 'Delivering high-performance solutions for modern computing demands.',
-    },
-];
+};
 
 export default function About() {
     return (
@@ -119,7 +119,7 @@ export default function About() {
             <div className="container mx-auto px-4 border-t border-branding-white/10 pt-16">
                 <div className="space-y-16">
                     <div className="text-center space-y-6 mb-16">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 hover:bg-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
                             Our Company
                         </Badge>
 
@@ -164,13 +164,13 @@ export default function About() {
                                                         {feature.title}
                                                     </h3>
 
-                                                    <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 hidden sm:inline-flex">
+                                                    <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 hover:bg-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
                                                         {feature.badge}
                                                     </Badge>
                                                 </div>
 
                                                 <p className="text-branding-white/70 text-lg">
-                                                {feature.description}
+                                                    {feature.description}
                                                 </p>
                                             </div>
                                         </div>
