@@ -53,7 +53,7 @@ export default function AssetsPage() {
             <section id="aum" className="py-12 sm:py-16 md:py-24 border-t border-branding-white/10">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12 md:mb-16">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
                             Assets Under Management
                         </Badge>
                         
@@ -75,7 +75,7 @@ export default function AssetsPage() {
                                         <div className="p-2 sm:p-3 bg-branding-orange/10 rounded-lg border border-branding-orange/20">
                                             <Building2 className="h-8 w-8 sm:h-10 sm:w-10 text-branding-orange" />
                                         </div>
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                             Property
                                         </Badge>
                                     </div>
@@ -95,13 +95,13 @@ export default function AssetsPage() {
                                 
                                 <div className="flex flex-wrap items-center gap-4 mt-4 sm:mt-6 text-sm sm:text-base text-branding-white/80">
                                     <div className="flex items-center">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 mr-2 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 mr-2 text-xs sm:text-sm">
                                             37.5
                                         </Badge>
                                         acres
                                     </div>
                                     <div className="flex items-center">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 mr-2 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 mr-2 text-xs sm:text-sm">
                                             LEED
                                         </Badge>
                                         Certified
@@ -117,7 +117,7 @@ export default function AssetsPage() {
                                         <div className="p-2 sm:p-3 bg-branding-orange/10 rounded-lg border border-branding-orange/20">
                                             <Banknote className="h-8 w-8 sm:h-10 sm:w-10 text-branding-orange" />
                                         </div>
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                             Finance
                                         </Badge>
                                     </div>
@@ -137,13 +137,13 @@ export default function AssetsPage() {
                                 
                                 <div className="flex flex-wrap items-center gap-4 mt-4 sm:mt-6 text-sm sm:text-base text-branding-white/80">
                                     <div className="flex items-center">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 mr-2 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 mr-2 text-xs sm:text-sm">
                                             $200M
                                         </Badge>
                                         Debt Target
                                     </div>
                                     <div className="flex items-center">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 mr-2 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 mr-2 text-xs sm:text-sm">
                                             $1B
                                         </Badge>
                                         Allocation Target
@@ -159,7 +159,7 @@ export default function AssetsPage() {
                                         <div className="p-2 sm:p-3 bg-branding-orange/10 rounded-lg border border-branding-orange/20">
                                             <BarChart3 className="h-8 w-8 sm:h-10 sm:w-10 text-branding-orange" />
                                         </div>
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                             Performance
                                         </Badge>
                                     </div>
@@ -179,13 +179,13 @@ export default function AssetsPage() {
                                 
                                 <div className="flex flex-wrap items-center gap-4 mt-4 sm:mt-6 text-sm sm:text-base text-branding-white/80">
                                     <div className="flex items-center">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 mr-2 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 mr-2 text-xs sm:text-sm">
                                             2M
                                         </Badge>
                                         Square Feet
                                     </div>
                                     <div className="flex items-center">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 mr-2 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 mr-2 text-xs sm:text-sm">
                                             100MW
                                         </Badge>
                                         Power Capacity
@@ -201,7 +201,7 @@ export default function AssetsPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                         <div className="space-y-4 sm:space-y-6 md:space-y-8">
-                            <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
+                            <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
                                 Key Highlights
                             </Badge>
                             
@@ -247,7 +247,7 @@ export default function AssetsPage() {
 
                             <div className="absolute bottom-6 right-6 z-20 bg-background/30 backdrop-blur-md p-4 rounded-lg border border-branding-white/10 shadow-xl max-w-[220px]">
                                 <div className="space-y-2">
-                                    <Badge variant="outline" className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs">
+                                    <Badge variant="outline" className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs">
                                         Innovation Hub
                                     </Badge>
 
@@ -268,7 +268,7 @@ export default function AssetsPage() {
             <section id="business" className="py-12 sm:py-16 md:py-24 border-t border-branding-white/10">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12 md:mb-16">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
                             Strategic Approach
                         </Badge>
                         
@@ -352,7 +352,7 @@ export default function AssetsPage() {
             <section id="market" className="py-12 sm:py-16 md:py-24 border-t border-branding-white/10 bg-gradient-to-b from-background to-background/90">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12 md:mb-16">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
                             Market Trends
                         </Badge>
                         
@@ -370,7 +370,7 @@ export default function AssetsPage() {
                             <CardContent className="p-4 sm:p-6 md:p-8">
                                 <div className="flex flex-col h-full">
                                     <div className="flex items-center justify-between mb-4 sm:mb-6">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                             Market Growth
                                         </Badge>
                                         <Globe className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-branding-orange opacity-70" />
@@ -389,7 +389,7 @@ export default function AssetsPage() {
                             <CardContent className="p-4 sm:p-6 md:p-8">
                                 <div className="flex flex-col h-full">
                                     <div className="flex items-center justify-between mb-4 sm:mb-6">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                             Key Drivers
                                         </Badge>
                                         <Cpu className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-branding-orange opacity-70" />
@@ -408,7 +408,7 @@ export default function AssetsPage() {
                             <CardContent className="p-4 sm:p-6 md:p-8">
                                 <div className="flex flex-col h-full">
                                     <div className="flex items-center justify-between mb-4 sm:mb-6">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                             Infrastructure
                                         </Badge>
                                         <Server className="h-6 w-6 sm:h-7 sm:w-7 md:h-8 md:w-8 text-branding-orange opacity-70" />
@@ -445,7 +445,7 @@ export default function AssetsPage() {
                                     </div>
                                     
                                     <div className="flex items-center justify-center gap-2 p-2 sm:p-3 bg-background/30 rounded-lg border border-branding-white/10 mt-4 sm:mt-6">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                             27.1%
                                         </Badge>
                                         <span className="text-xs sm:text-sm md:text-base text-branding-white/80">Compound Annual Growth Rate</span>
@@ -480,7 +480,7 @@ export default function AssetsPage() {
                                     </div>
                                     
                                     <div className="flex items-center justify-center gap-2 p-2 sm:p-3 bg-background/30 rounded-lg border border-branding-white/10">
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                        <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                             38.1%
                                         </Badge>
                                         <span className="text-xs sm:text-sm md:text-base text-branding-white/80">Expected CAGR from 2022 to 2030</span>
@@ -496,7 +496,7 @@ export default function AssetsPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
                         <div className="space-y-4 sm:space-y-6 md:space-y-8">
-                            <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
+                            <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
                                 Investment Strategy
                             </Badge>
                             
@@ -516,7 +516,7 @@ export default function AssetsPage() {
                                     <div className="relative z-10">
                                         <div className="flex items-center justify-between mb-3 sm:mb-4">
                                             <h3 className="text-lg sm:text-xl font-bold text-branding-white">70%</h3>
-                                            <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                            <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                                 Real Estate
                                             </Badge>
                                         </div>
@@ -537,7 +537,7 @@ export default function AssetsPage() {
                                     <div className="relative z-10">
                                         <div className="flex items-center justify-between mb-3 sm:mb-4">
                                             <h3 className="text-lg sm:text-xl font-bold text-branding-white">20%</h3>
-                                            <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                            <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                                 Venture Capital
                                             </Badge>
                                         </div>
@@ -558,7 +558,7 @@ export default function AssetsPage() {
                                     <div className="relative z-10">
                                         <div className="flex items-center justify-between mb-3 sm:mb-4">
                                             <h3 className="text-lg sm:text-xl font-bold text-branding-white">10%</h3>
-                                            <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 text-xs sm:text-sm">
+                                            <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 text-xs sm:text-sm">
                                                 Operations
                                             </Badge>
                                         </div>
@@ -621,7 +621,7 @@ export default function AssetsPage() {
             <section id="projections" className="py-12 sm:py-16 md:py-24 border-t border-branding-white/10 bg-gradient-to-b from-background to-background/90">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <div className="text-center space-y-4 sm:space-y-6 mb-8 sm:mb-12 md:mb-16">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-3 sm:px-4 py-1 sm:py-1.5 text-xs sm:text-sm font-medium tracking-wide uppercase">
                             Growth Trajectory
                         </Badge>
                         
@@ -633,7 +633,7 @@ export default function AssetsPage() {
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 sm:gap-6 md:gap-8 max-w-5xl mx-auto">
                         <Card className="bg-background/30 border-branding-white/10 backdrop-blur-sm hover:border-branding-orange/30 transition-colors">
                             <CardContent className="p-4 sm:p-6 md:p-8">
-                                <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 mb-3 sm:mb-4 text-xs sm:text-sm">
+                                <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 mb-3 sm:mb-4 text-xs sm:text-sm">
                                     Short-Term (Year 1-2)
                                 </Badge>
                                 
@@ -656,7 +656,7 @@ export default function AssetsPage() {
                         
                         <Card className="bg-background/30 border-branding-white/10 backdrop-blur-sm hover:border-branding-orange/30 transition-colors">
                             <CardContent className="p-4 sm:p-6 md:p-8">
-                                <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 mb-3 sm:mb-4 text-xs sm:text-sm">
+                                <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 mb-3 sm:mb-4 text-xs sm:text-sm">
                                     Mid-Term (Year 3-5)
                                 </Badge>
                                 
@@ -679,7 +679,7 @@ export default function AssetsPage() {
                         
                         <Card className="bg-background/30 border-branding-white/10 backdrop-blur-sm hover:border-branding-orange/30 transition-colors sm:col-span-2 md:col-span-1">
                             <CardContent className="p-4 sm:p-6 md:p-8">
-                                <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 mb-3 sm:mb-4 text-xs sm:text-sm">
+                                <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 mb-3 sm:mb-4 text-xs sm:text-sm">
                                     Long-Term (Year 5+)
                                 </Badge>
                                 

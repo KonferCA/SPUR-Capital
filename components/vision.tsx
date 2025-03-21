@@ -41,7 +41,7 @@ export default function Vision() {
             <div className="container mx-auto px-4 border-t border-branding-white/10 pt-16">
                 <div className="space-y-16">
                     <div className="text-center space-y-6 mb-8">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange border hover:bg-branding-orange/30 border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Transformative Technologies
                         </Badge>
                         

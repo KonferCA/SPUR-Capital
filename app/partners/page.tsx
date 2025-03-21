@@ -154,7 +154,7 @@ export default function PartnershipsPage() {
                 
                 <div className="container mx-auto px-4">
                     <div className="max-w-4xl mx-auto text-center space-y-6">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Collaborative Innovation
                         </Badge>
                         
@@ -173,7 +173,7 @@ export default function PartnershipsPage() {
             <section id="types" className="py-24 border-t border-branding-white/10">
                 <div className="container mx-auto px-4">
                     <div className="text-center space-y-6 mb-16">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Engagement Models
                         </Badge>
                         
@@ -215,7 +215,7 @@ export default function PartnershipsPage() {
             <section id="benefits" className="py-24 border-t border-branding-white/10 bg-gradient-to-b from-background to-background/90">
                 <div className="container mx-auto px-4">
                     <div className="text-center space-y-6 mb-12">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Why Partner With Us
                         </Badge>
                         
@@ -230,7 +230,7 @@ export default function PartnershipsPage() {
                     
                     <div className="flex flex-wrap justify-center gap-3 mb-12">
                         <Badge 
-                            className={`px-4 py-2 text-sm cursor-pointer ${activeTab === 'all' ? 'bg-branding-orange/20 text-branding-orange border-branding-orange/30' : 'bg-background/30 text-branding-white/80 border-branding-white/20 hover:bg-branding-orange/10 hover:text-branding-orange hover:border-branding-orange/20'}`}
+                            className={`px-4 py-2 text-sm cursor-pointer ${activeTab === 'all' ? 'bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/30' : 'bg-background/30 text-branding-white/80 border-branding-white/20 hover:bg-branding-orange/10 hover:text-branding-orange hover:border-branding-orange/20'}`}
                             onClick={() => setActiveTab('all')}
                         >
                             All Benefits
@@ -239,7 +239,7 @@ export default function PartnershipsPage() {
                         {partnershipTypes.map((type) => (
                             <Badge 
                                 key={type.id}
-                                className={`px-4 py-2 text-sm cursor-pointer ${activeTab === type.id ? 'bg-branding-orange/20 text-branding-orange border-branding-orange/30' : 'bg-background/30 text-branding-white/80 border-branding-white/20 hover:bg-branding-orange/10 hover:text-branding-orange hover:border-branding-orange/20'}`}
+                                className={`px-4 py-2 text-sm cursor-pointer ${activeTab === type.id ? 'bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/30' : 'bg-background/30 text-branding-white/80 border-branding-white/20 hover:bg-branding-orange/10 hover:text-branding-orange hover:border-branding-orange/20'}`}
                                 onClick={() => setActiveTab(type.id)}
                             >
                                 {type.name}
@@ -277,7 +277,7 @@ export default function PartnershipsPage() {
             <section id="join" className="py-24 border-t border-branding-white/10">
                 <div className="container mx-auto px-4">
                     <div className="text-center space-y-6 mb-16">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Getting Started
                         </Badge>
                         
@@ -318,7 +318,7 @@ export default function PartnershipsPage() {
             <section className="py-24 border-t border-branding-white/10 bg-gradient-to-b from-background to-background/90">
                 <div className="container mx-auto px-4">
                     <div className="text-center space-y-6 mb-16">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Our Audience
                         </Badge>
                         

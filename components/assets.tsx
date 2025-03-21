@@ -35,7 +35,7 @@ export default function Assets() {
             <div className="container mx-auto px-4 border-t border-branding-white/10 pt-16">
                 <div className="space-y-12">
                     <div className="text-center space-y-6 mb-12">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange border hover:bg-branding-orange/30 border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Financial Growth
                         </Badge>
                         
@@ -63,7 +63,7 @@ export default function Assets() {
                                             <asset.icon className="h-8 w-8 text-branding-orange" />
                                         </div>
 
-                                        <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20">
+                                        <Badge className="bg-branding-orange/10 hover:bg-branding-orange/30 text-branding-orange border-branding-orange/20">
                                             {asset.badge}
                                         </Badge>
                                     </div>

@@ -9,7 +9,7 @@ export default function CTA() {
             <div className="container mx-auto px-4">
                 <div className="space-y-16 border-t border-branding-white/10 pt-16">
                     <div className="flex flex-col items-center gap-6 py-12 text-center md:py-16">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Get Started
                         </Badge>
                         

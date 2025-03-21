@@ -92,7 +92,7 @@ export default function Partners() {
             <div className="container mx-auto px-4">
                 <div className="space-y-16 border-t border-branding-white/10 pt-16">
                     <div className="text-center space-y-6 mb-12">
-                        <Badge className="bg-branding-orange/20 text-branding-orange border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
+                        <Badge className="bg-branding-orange/20 text-branding-orange hover:bg-branding-orange/30 border border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Our Collaborators
                         </Badge>
                         
@@ -120,7 +120,7 @@ export default function Partners() {
                                     className={`
                                         px-4 py-2 text-sm cursor-pointer transition-colors
                                         ${activeFilters.includes(category) 
-                                            ? 'bg-branding-orange/20 text-branding-orange border-branding-orange/30' 
+                                            ? 'bg-branding-orange/20 text-branding-orange border-branding-orange/30 hover:bg-branding-orange/30' 
                                             : 'bg-background/30 text-branding-white/80 border-branding-white/20 hover:bg-branding-orange/10 hover:text-branding-orange hover:border-branding-orange/20'
                                         }
                                     `}
@@ -190,8 +190,8 @@ export default function Partners() {
                                                     className={`
                                                         text-xs
                                                         ${activeFilters.includes(category) 
-                                                            ? 'bg-branding-orange/10 text-branding-orange border-branding-orange/20' 
-                                                            : 'bg-background/40 text-branding-white/70 border-branding-white/20'
+                                                            ? 'bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20' 
+                                                            : 'bg-background/40 text-branding-white/70 hover:bg-branding-orange/30 border-branding-white/20'
                                                         }
                                                     `}
                                                     onClick={() => toggleFilter(category)}
@@ -217,7 +217,7 @@ export default function Partners() {
                     <div className="mt-16 bg-gradient-to-br from-background/60 to-background/40 border border-branding-white/10 rounded-xl p-8">
                         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                             <div>
-                                <Badge className="bg-branding-orange/10 text-branding-orange border-branding-orange/20 mb-4">
+                                <Badge className="bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20 mb-4">
                                     Strategic Alliances
                                 </Badge>
                                 
