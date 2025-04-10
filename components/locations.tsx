@@ -57,7 +57,7 @@ const cities = [
             'Data Center',
             'R&D Labs + Offices',
             'Innovation Hub',
-            'Private Office Space',
+            'Private Innovation Space',
             'Co-Working Space',
         ],
         occupancy: '95%',
@@ -67,14 +67,14 @@ const cities = [
             'Fiber Connection',
             'Innovation Hub',
             'Tech Campus',
-            'Premium Office Space',
+            'Premium Innovation Space',
         ],
         description:
-            'Our flagship location featuring private and co-share office space right in the heart of Waterloo Region tech hub, cutting-edge cooling systems and direct connection to major network exchanges.',
+            'Our flagship location featuring private and co-share innovation space right in the heart of Waterloo Region tech hub, cutting-edge cooling systems and direct connection to major network exchanges.',
         featured: true,
     },
     {
-        name: 'Mirabel / Montreal',
+        name: 'Ottawa',
         country: 'Canada',
         sqft: '100,000',
         spaces: ['Flex Industrial', 'Data Center', 'R&D Labs + Offices'],
@@ -85,7 +85,7 @@ const cities = [
             'Purpose-built tech campus with integrated data center operations and collaborative innovation spaces.',
     },
     {
-        name: 'Ottawa',
+        name: 'Mirabel / Montreal Ottawa',
         country: 'Canada',
         sqft: '70,000',
         spaces: ['Flex Industrial', 'Data Center', 'R&D Labs + Offices'],
@@ -257,7 +257,7 @@ export default function Locations() {
                                             <div className="flex items-center mb-4 text-branding-white/80">
                                                 <Users className="h-5 w-5 text-branding-orange mr-2" />
                                                 <span className="font-medium text-lg">
-                                                    Premium Office Space
+                                                    Premium Innovation Space
                                                     Available
                                                 </span>
                                             </div>
