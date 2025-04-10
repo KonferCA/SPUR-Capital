@@ -1,14 +1,14 @@
 import './globals.css';
-import { Roboto } from 'next/font/google';
 import type React from 'react';
 import type { Metadata } from 'next';
+import { Roboto } from 'next/font/google';
 import MouseMoveEffect from '@/components/mouse-move-effect';
 
 const roboto = Roboto({
     weight: '400',
     subsets: ['latin'],
 })
-   
+
 
 export const metadata: Metadata = {
     title: 'SPUR Capital - Spurring the Future Funding of Decentralized Smart City Infrastructure ',
@@ -30,6 +30,10 @@ export default function RootLayout({
 }) {
     return (
         <html lang="en" className="dark">
+            <head>
+                <link rel="apple-touch-icon" href="/assets/spur-icon.svg" />
+                <link rel="icon" href="/assets/spur-icon.svg" />
+            </head>
             <body
                 className={`${roboto.className} bg-background text-foreground antialiased`}
             >
