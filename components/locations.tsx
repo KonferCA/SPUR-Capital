@@ -62,7 +62,7 @@ const cities = [
         description: 'Purpose-built tech campus with integrated data center operations and collaborative innovation spaces.'
     },
     {
-        name: 'Alberta',
+        name: 'Ottawa',
         country: 'Canada',
         sqft: '70,000',
         spaces: ['Flex Industrial', 'Data Center', 'R&D Labs + Offices'],
@@ -72,7 +72,7 @@ const cities = [
         description: 'Our largest facility, leveraging Quebec\'s low-cost renewable energy and cold climate for optimal efficiency.'
     },
     {
-        name: 'Ottawa',
+        name: 'Alberta',
         country: 'Canada',
         sqft: '10,000',
         spaces: ['Flex Industrial', 'Data Center', 'R&D Labs + Offices'],
@@ -84,25 +84,25 @@ const cities = [
 ];
 
 function CampusCarousel() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({ 
+    const [emblaRef, emblaApi] = useEmblaCarousel({
         loop: true,
         align: 'center',
         slidesToScroll: 1
     }, [Autoplay({ delay: 3000, stopOnInteraction: false })]);
-    
+
     const [_, setSelectedIndex] = useState(0);
-    
+
     useEffect(() => {
         if (!emblaApi) return;
-        
+
         const onSelect = () => {
             setSelectedIndex(emblaApi.selectedScrollSnap());
         };
-        
+
         emblaApi.on('select', onSelect);
 
         onSelect();
-        
+
         return () => {
             emblaApi.off('select', onSelect);
         };
@@ -126,14 +126,14 @@ function CampusCarousel() {
                     ))}
                 </div>
             </div>
-            
+
             <div className="absolute bottom-2 left-0 right-0 flex justify-center space-x-1.5 z-20 pointer-events-none">
                 {waterlooImages.map((_, index) => (
                     <button
                         key={index}
                         className={`w-3 h-3 rounded-full transition-colors pointer-events-auto ${
-                            emblaApi?.selectedScrollSnap() === index 
-                                ? "bg-branding-orange" 
+                            emblaApi?.selectedScrollSnap() === index
+                                ? "bg-branding-orange"
                                 : "bg-white/30 hover:bg-white/50"
                         }`}
                         onClick={(e) => {
@@ -161,7 +161,7 @@ export default function Locations() {
                         <Badge className="bg-branding-orange/20 text-branding-orange border hover:bg-branding-orange/30 border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Strategic Presence
                         </Badge>
-                        
+
                         <h2 className="bg-gradient-to-br from-branding-white from-30% via-branding-white/90 to-branding-white/70 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
                             Our Locations
                         </h2>
@@ -176,12 +176,12 @@ export default function Locations() {
 
                     <div className="max-w-[800px] mx-auto text-center mb-12">
                         <p className="text-branding-white/80 text-lg sm:text-xl">
-                            SPUR's data centers are strategically located in Canada's technology corridors, 
-                            offering clients access to reliable infrastructure, renewable energy sources, 
+                            SPUR's data centers are strategically located in Canada's technology corridors,
+                            offering clients access to reliable infrastructure, renewable energy sources,
                             and optimal connectivity with minimal latency.
                         </p>
                     </div>
-                    
+
                     {featuredCity && (
                         <div className="mb-12">
                             <div className="text-center mb-8">
@@ -189,7 +189,7 @@ export default function Locations() {
                                     Our Flagship Facility
                                 </h3>
                             </div>
-                            
+
                             <Card className="group relative overflow-hidden border border-branding-orange/30 bg-background/30 backdrop-blur-sm hover:border-branding-orange/50 transition-colors">
                                 <CardContent className="p-8 md:p-10">
                                     <div className="mb-6 flex items-center justify-between">
@@ -204,18 +204,18 @@ export default function Locations() {
                                                 {featuredCity.name}
                                             </h3>
                                         </div>
-                                        
+
                                         <div className="p-3 bg-branding-orange/10 rounded-lg border border-branding-orange/20">
                                             <featuredCity.icon className="h-12 w-12 text-branding-orange" />
                                         </div>
                                     </div>
-                                    
+
                                     <div className="grid md:grid-cols-2 gap-8">
                                         <div>
                                             <p className="text-branding-white/70 text-lg mb-6">
                                                 {featuredCity.description}
                                             </p>
-                                            
+
                                             <div className="flex items-center mb-4 text-branding-white/80">
                                                 <Users className="h-5 w-5 text-branding-orange mr-2" />
                                                 <span className="font-medium text-lg">Premium Office Space Available</span>
@@ -224,16 +224,16 @@ export default function Locations() {
                                             <p className="text-branding-white/70 mb-6 text-center text-md">
                                                 Private and co-share office space right in the heart of Waterloo Region Tech Hub.
                                             </p>
-                                            
+
                                             <p className="text-branding-white/70 mb-6">
                                                 &#x2794; SPUR launched the co-working phenomenon. It emphasizes both community and convenience. <br /> <br />
-                                                &#x2794; We offer custom spaces for all kinds of local startups, as well as full-sized companies. <br /> <br /> 
+                                                &#x2794; We offer custom spaces for all kinds of local startups, as well as full-sized companies. <br /> <br />
                                                 &#x2794; With 4 different locations speckled throughout Kitchener-Waterloo our offices conveniently located next to major Universities, Colleges, and big companies, such as Google, Toyota, Research in Motion, OpenText, Manulife, Sunlife, and many more.  <br /><br />
                                                 &#x2794; All our locations are easily accessible by public transportation and conveniently located near commercial districts and boutique shops. <br /><br />
                                                 &#x2794; Members get access to amenities such as coffee, 24/7 space access, printing services, daily cleaning, mailing services access to conference rooms and much more.
                                             </p>
                                         </div>
-                                        
+
                                         <div className="space-y-5">
                                             <div>
                                                 <div className="flex justify-between items-center mb-2">
@@ -244,7 +244,7 @@ export default function Locations() {
                                                         {featuredCity.sqft} sq ft
                                                     </span>
                                                 </div>
-                                                
+
                                                 <div className="flex items-center gap-2">
                                                     <div className="flex-1 h-2 bg-branding-white/10 rounded-full overflow-hidden">
                                                         <div
@@ -257,15 +257,15 @@ export default function Locations() {
                                                     </span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div>
                                                 <h4 className="text-sm font-medium text-branding-white/90 mb-2">
                                                     Available Spaces
                                                 </h4>
                                                 <div className="flex flex-wrap gap-2">
                                                     {featuredCity.spaces.map((space) => (
-                                                        <Badge 
-                                                            key={space} 
+                                                        <Badge
+                                                            key={space}
                                                             className="bg-branding-orange/10 hover:bg-branding-orange/30 text-branding-orange border-branding-orange/20"
                                                         >
                                                             {space}
@@ -273,7 +273,7 @@ export default function Locations() {
                                                     ))}
                                                 </div>
                                             </div>
-                                            
+
                                             <div>
                                                 <h4 className="text-sm font-medium text-branding-white/90 mb-2">
                                                     Facility Highlights
@@ -290,7 +290,7 @@ export default function Locations() {
                                                     ))}
                                                 </div>
                                             </div>
-                                            
+
                                             <div className="mt-6">
                                                 <h4 className="text-sm font-medium text-branding-white/90 mb-3">
                                                     Campus Views
@@ -299,27 +299,27 @@ export default function Locations() {
                                             </div>
                                         </div>
                                     </div>
-                                    
+
                                     <div className="absolute inset-0 bg-gradient-to-tr from-branding-orange/5 via-transparent to-branding-lightBlue/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </CardContent>
                             </Card>
-                            
+
                             <div className="mt-6 text-center">
                                 <p className="text-branding-white/80">
-                                    Our Kitchener/Waterloo location is highly sought after with limited availability. 
+                                    Our Kitchener/Waterloo location is highly sought after with limited availability.
                                     Contact us today to secure your space in this premier technology hub.
                                 </p>
                             </div>
                         </div>
                     )}
-                    
+
                     <div>
                         <div className="text-center mb-8">
                             <h3 className="text-2xl font-bold text-branding-white">
                                 Additional Locations
                             </h3>
                         </div>
-                        
+
                         <div className="grid gap-8 sm:grid-cols-1 md:grid-cols-3">
                             {otherCities.map((city) => (
                                 <Card
@@ -339,16 +339,16 @@ export default function Locations() {
                                                     {city.name}
                                                 </h3>
                                             </div>
-                                            
+
                                             <div className="p-3 bg-branding-orange/10 rounded-lg border border-branding-orange/20">
                                                 <city.icon className="h-10 w-10 text-branding-orange" />
                                             </div>
                                         </div>
-                                        
+
                                         <p className="text-branding-white/70 mb-4">
                                             {city.description}
                                         </p>
-                                        
+
                                         <div className="space-y-5">
                                             <div>
                                                 <div className="flex justify-between items-center mb-2">
@@ -359,7 +359,7 @@ export default function Locations() {
                                                         {city.sqft} sq ft
                                                     </span>
                                                 </div>
-                                                
+
                                                 <div className="flex items-center gap-2">
                                                     <div className="flex-1 h-2 bg-branding-white/10 rounded-full overflow-hidden">
                                                         <div
@@ -372,15 +372,15 @@ export default function Locations() {
                                                     </span>
                                                 </div>
                                             </div>
-                                            
+
                                             <div>
                                                 <h4 className="text-sm font-medium text-branding-white/90 mb-2">
                                                     Available Spaces
                                                 </h4>
                                                 <div className="flex flex-wrap gap-2">
                                                     {city.spaces.map((space) => (
-                                                        <Badge 
-                                                            key={space} 
+                                                        <Badge
+                                                            key={space}
                                                             className="bg-branding-orange/10 hover:bg-branding-orange/30 text-branding-orange border-branding-orange/20"
                                                         >
                                                             {space}
@@ -388,7 +388,7 @@ export default function Locations() {
                                                     ))}
                                                 </div>
                                             </div>
-                                            
+
                                             <div>
                                                 <h4 className="text-sm font-medium text-branding-white/90 mb-2">
                                                     Facility Highlights
@@ -406,17 +406,17 @@ export default function Locations() {
                                                 </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div className="absolute inset-0 bg-gradient-to-tr from-branding-orange/5 via-transparent to-branding-lightBlue/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                     </CardContent>
                                 </Card>
                             ))}
                         </div>
                     </div>
-                    
+
                     <div className="text-center space-y-8 max-w-3xl mx-auto">
                         <p className="text-branding-white/80 text-lg">
-                            Our facilities are designed to meet the demanding requirements of AI and quantum computing, 
+                            Our facilities are designed to meet the demanding requirements of AI and quantum computing,
                             with expandable capacity to support our clients' growth needs and specialized infrastructure.
                         </p>
                     </div>
