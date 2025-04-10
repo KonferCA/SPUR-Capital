@@ -56,12 +56,12 @@ export default function Footer() {
                         </h3>
                         <div className="flex items-start gap-3 justify-end">
                             <Link
-                                href="https://maps.app.goo.gl/XzLMP72NDx2hvc1D9"
+                                href="https://maps.app.goo.gl/hnxxnz8D2ihV4PeZ9"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-branding-white/80 hover:text-branding-orange transition-colors underline"
                             >
-                                283 Duke St W, Kitchener, ON N2H 5C2
+                                2240 University Ave, Waterloo, ON N2K 0A9, Canada
                             </Link>
                             <MapPin className="h-5 w-5 text-branding-orange mt-1 flex-shrink-0" />
                         </div>
