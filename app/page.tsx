@@ -16,7 +16,7 @@ export default function Home() {
                 <div className="absolute right-0 top-0 h-[500px] w-[500px] bg-blue-500/10 blur-[100px]" />
                 <div className="absolute bottom-0 left-0 h-[500px] w-[500px] bg-purple-500/10 blur-[100px]" />
             </div>
-            
+
             <div className="relative z-10">
                 <Navbar />
                 <Hero />

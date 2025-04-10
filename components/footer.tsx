@@ -9,19 +9,24 @@ export default function Footer() {
                     <div className="space-y-6">
                         <div>
                             <Link href="/" className="inline-block">
-                                <h2 className="text-branding-white text-2xl font-bold">SPUR</h2>
+                                <h2 className="text-branding-white text-2xl font-bold">
+                                    SPUR
+                                </h2>
                             </Link>
                             <p className="text-branding-white/60 mt-2">
-                                Spurring the Future Funding of Decentralized Smart City Infrastructure
+                                Spurring the Future Funding of Decentralized
+                                Smart City Infrastructure
                             </p>
                         </div>
-                        
+
                         <div className="mt-4">
                             <p className="text-branding-white/70">
-                                SPUR is redefining how cities implement smart infrastructure with decentralized funding models and sustainable technology solutions.
+                                SPUR is redefining how cities implement smart
+                                infrastructure with decentralized funding models
+                                and sustainable technology solutions.
                             </p>
                         </div>
-                        
+
                         <div className="flex space-x-4">
                             <Link
                                 href="https://twitter.com/SpurInnovation"
@@ -44,13 +49,15 @@ export default function Footer() {
                             </Link>
                         </div>
                     </div>
-                    
+
                     <div className="space-y-4 flex flex-col items-end text-right">
-                        <h3 className="text-branding-white font-semibold">Contact Us</h3>
+                        <h3 className="text-branding-white font-semibold">
+                            Contact Us
+                        </h3>
                         <div className="flex items-start gap-3 justify-end">
-                            <Link 
-                                href="https://maps.app.goo.gl/XzLMP72NDx2hvc1D9" 
-                                target="_blank" 
+                            <Link
+                                href="https://maps.app.goo.gl/XzLMP72NDx2hvc1D9"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-branding-white/80 hover:text-branding-orange transition-colors underline"
                             >
@@ -58,11 +65,11 @@ export default function Footer() {
                             </Link>
                             <MapPin className="h-5 w-5 text-branding-orange mt-1 flex-shrink-0" />
                         </div>
-                        
+
                         <div className="flex items-center gap-3 justify-end">
-                            <Link 
-                                href="tel:+18883174024" 
-                                target="_blank" 
+                            <Link
+                                href="tel:+18883174024"
+                                target="_blank"
                                 rel="noopener noreferrer"
                                 className="hover:text-branding-orange transition-colors underline"
                             >
@@ -70,10 +77,10 @@ export default function Footer() {
                             </Link>
                             <Phone className="h-5 w-5 text-branding-orange flex-shrink-0" />
                         </div>
-                        
+
                         <div className="flex items-center gap-3 justify-end">
-                            <Link 
-                                href="mailto:info@spur.com" 
+                            <Link
+                                href="mailto:info@spur.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="hover:text-branding-orange transition-colors underline"
@@ -84,13 +91,14 @@ export default function Footer() {
                         </div>
                     </div>
                 </div>
-                
+
                 <div className="border-t border-branding-white/10 py-6 mt-8 text-center">
                     <div className="flex flex-col md:flex-row justify-between items-center gap-4">
                         <p className="text-branding-white/50 text-sm">
-                            &copy; {new Date().getFullYear()} SPUR Innovation Center, Inc. All rights reserved.
+                            &copy; {new Date().getFullYear()} SPUR Innovation
+                            Center, Inc. All rights reserved.
                         </p>
-                        
+
                         {/* <div className="flex gap-4 text-branding-white/50 text-sm justify-center items-center">
                             <Link href="/privacy" className="hover:text-branding-orange transition-colors">
                                 Privacy Policy
@@ -105,7 +113,13 @@ export default function Footer() {
 
                         <div className="flex gap-4 justify-center items-center">
                             <p className="text-branding-white/50 text-sm">
-                                Made & Designed by <a href="https://konfer.ca/" className="hover:text-branding-orange transition-colors underline">Konfer</a>
+                                Made & Designed by{' '}
+                                <a
+                                    href="https://konfer.ca/"
+                                    className="hover:text-branding-orange transition-colors underline"
+                                >
+                                    Konfer
+                                </a>
                             </p>
                         </div>
                     </div>

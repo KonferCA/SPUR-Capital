@@ -7,8 +7,7 @@ import MouseMoveEffect from '@/components/mouse-move-effect';
 const roboto = Roboto({
     weight: '400',
     subsets: ['latin'],
-})
-
+});
 
 export const metadata: Metadata = {
     title: 'SPUR Capital - Spurring the Future Funding of Decentralized Smart City Infrastructure ',

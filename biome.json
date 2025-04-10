@@ -7,7 +7,7 @@
     },
     "files": {
         "ignoreUnknown": false,
-        "ignore": ["dist", "**/tsconfig*.json"]
+        "ignore": ["dist", "**/tsconfig*.json", ".next/*"]
     },
     "formatter": {
         "useEditorconfig": true,

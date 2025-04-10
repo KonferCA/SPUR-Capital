@@ -10,17 +10,17 @@ import { ArrowRight, X } from 'lucide-react';
 import SectionWrapper from './section-wrapper';
 
 import BlackBerry from '@/public/assets/partners/blackberry.jpg';
-import QNX from "@/public/assets/partners/qnx.svg";
-import Purolator from "@/public/assets/partners/purolator.webp";
-import Avidbots from "@/public/assets/partners/avidbots.svg";
-import Ascension from "@/public/assets/partners/ascension.png";
-import FluidAI from "@/public/assets/partners/fluidai.png";
-import Cloudwifi from "@/public/assets/partners/cloudwifi.png";
-import Alchemy from "@/public/assets/partners/alchemy.svg";
-import Generac from "@/public/assets/partners/generac.png";
-import DirectGlobal from "@/public/assets/partners/direct-global.png";
-import FareEats from "@/public/assets/partners/fare-eats.png";
-import Nicoya from "@/public/assets/partners/nicoya.png";
+import QNX from '@/public/assets/partners/qnx.svg';
+import Purolator from '@/public/assets/partners/purolator.webp';
+import Avidbots from '@/public/assets/partners/avidbots.svg';
+import Ascension from '@/public/assets/partners/ascension.png';
+import FluidAI from '@/public/assets/partners/fluidai.png';
+import Cloudwifi from '@/public/assets/partners/cloudwifi.png';
+import Alchemy from '@/public/assets/partners/alchemy.svg';
+import Generac from '@/public/assets/partners/generac.png';
+import DirectGlobal from '@/public/assets/partners/direct-global.png';
+import FareEats from '@/public/assets/partners/fare-eats.png';
+import Nicoya from '@/public/assets/partners/nicoya.png';
 import Crawford from '@/public/assets/partners/crawford.png';
 import Molex from '@/public/assets/partners/molex.png';
 import MagnetForensics from '@/public/assets/partners/magnet.jpg';
@@ -30,121 +30,120 @@ import Partnerships from '@/public/assets/partnerships.jpg';
 import { log } from 'console';
 import { Description } from '@radix-ui/react-dialog';
 
-
 const partners = [
     {
-        name: "BlackBerry",
+        name: 'BlackBerry',
         logo: BlackBerry,
-        categories: ["Software", "Cybersecurity"],
-        description: "Secure data management and communication solutions.",
-        url: "https://blackberry.com/"
+        categories: ['Software', 'Cybersecurity'],
+        description: 'Secure data management and communication solutions.',
+        url: 'https://blackberry.com/',
     },
     {
-        name: "QNX",
+        name: 'QNX',
         logo: QNX,
-        categories: ["IoT", "Software", "Automotive"],
-        description: "High-Performance Embedded Solutions.",
-        url: "https://blackberry.qnx.com/en"
+        categories: ['IoT', 'Software', 'Automotive'],
+        description: 'High-Performance Embedded Solutions.',
+        url: 'https://blackberry.qnx.com/en',
     },
     {
-        name: "Purolator",
+        name: 'Purolator',
         logo: Purolator,
-        categories: ["Logistics"],
-        Description: "Logistics and supply chain solutions.",
-        url: "https://purolator.com/en"
+        categories: ['Logistics'],
+        Description: 'Logistics and supply chain solutions.',
+        url: 'https://purolator.com/en',
     },
     {
-        name: "Avidbots",
+        name: 'Avidbots',
         logo: Avidbots,
-        categories: ["AI", "Cleaning", "Engineering"],
-        description: "Autonomous cleaning robots and solutions.",
-        url: "https://avidbots.com/"
+        categories: ['AI', 'Cleaning', 'Engineering'],
+        description: 'Autonomous cleaning robots and solutions.',
+        url: 'https://avidbots.com/',
     },
     {
-        name: "Ascension Automation Solutions",
+        name: 'Ascension Automation Solutions',
         logo: Ascension,
-        categories: ["Engineering"],
-        description: "Automation solutions for manufacturing and logistics.",
-        url: "https://ascensionas.ca/"
+        categories: ['Engineering'],
+        description: 'Automation solutions for manufacturing and logistics.',
+        url: 'https://ascensionas.ca/',
     },
     {
-        name: "FluidAI",
+        name: 'FluidAI',
         logo: FluidAI,
-        categories: ["Engineering", "Medical"],
-        description: "AI-driven solutions for fluid management and control.",
-        url: "https://fluidai.md/"
+        categories: ['Engineering', 'Medical'],
+        description: 'AI-driven solutions for fluid management and control.',
+        url: 'https://fluidai.md/',
     },
     {
-        name: "Cloudwifi",
+        name: 'Cloudwifi',
         logo: Cloudwifi,
-        categories: ["Telecommunications"],
-        description: "Cloud-based WiFi solutions for businesses.",
-        url: "https://cloudwifi.ca/"
+        categories: ['Telecommunications'],
+        description: 'Cloud-based WiFi solutions for businesses.',
+        url: 'https://cloudwifi.ca/',
     },
     {
-        name: "Alchemy",
+        name: 'Alchemy',
         logo: Alchemy,
-        categories: ["Software", "Nanotechnology"],
-        description: "Next generation coatings powered by nanotechnology.",
-        url: "https://alchemynano.com/"
+        categories: ['Software', 'Nanotechnology'],
+        description: 'Next generation coatings powered by nanotechnology.',
+        url: 'https://alchemynano.com/',
     },
     {
-        name: "Generac",
+        name: 'Generac',
         logo: Generac,
-        categories: ["Energy"],
-        description: "Energy solutions and backup power systems.",
-        url: "https://generac.com/"
+        categories: ['Energy'],
+        description: 'Energy solutions and backup power systems.',
+        url: 'https://generac.com/',
     },
     {
-        name: "Direct Global",
+        name: 'Direct Global',
         logo: DirectGlobal,
-        categories: ["Logistics"],
-        description: "Global logistics and supply chain solutions",
-        url: "Allow purchasers to leverage their collective purchasing power."
+        categories: ['Logistics'],
+        description: 'Global logistics and supply chain solutions',
+        url: 'Allow purchasers to leverage their collective purchasing power.',
     },
     {
-        name: "Fare Eats",
+        name: 'Fare Eats',
         logo: FareEats,
-        categories: ["Food"],
-        description: "Food delivery and logistics solutions.",
-        url: "https://fareeats.com/"
+        categories: ['Food'],
+        description: 'Food delivery and logistics solutions.',
+        url: 'https://fareeats.com/',
     },
     {
-        name: "Nicoya",
+        name: 'Nicoya',
         logo: Nicoya,
         categories: [],
-        description: "Empower scientists with accessible SPR instrumentation.",
-        url: "https://nicoyalife.com/"
+        description: 'Empower scientists with accessible SPR instrumentation.',
+        url: 'https://nicoyalife.com/',
     },
     {
-        name: "Crawford",
+        name: 'Crawford',
         logo: Crawford,
-        categories: ["Insurance"],
-        description: "Global claims management and risk solutions."
+        categories: ['Insurance'],
+        description: 'Global claims management and risk solutions.',
     },
     {
-        name: "Molex",
+        name: 'Molex',
         logo: Molex,
-        categories: ["Engineering"],
-        description: "Advanced physical and digital security solutions."
+        categories: ['Engineering'],
+        description: 'Advanced physical and digital security solutions.',
     },
     {
-        name: "Magnet Forensics",
+        name: 'Magnet Forensics',
         logo: MagnetForensics,
-        categories: ["Engineering", "Cybersecurity", "Software"],
-        description: "Digital forensics and incident response software."
+        categories: ['Engineering', 'Cybersecurity', 'Software'],
+        description: 'Digital forensics and incident response software.',
     },
     {
-        name: "WSIB Ontario",
+        name: 'WSIB Ontario',
         logo: WSIB,
-        categories: ["Insurance"],
-        description: "Ontario Workplace Safety and Insurance Board."
+        categories: ['Insurance'],
+        description: 'Ontario Workplace Safety and Insurance Board.',
     },
     {
-        name: "Konfer",
+        name: 'Konfer',
         logo: Konfer,
-        categories: ["Logistics", "Software"],
-        description: "Logistical partnership and software solutions."
+        categories: ['Logistics', 'Software'],
+        description: 'Logistical partnership and software solutions.',
     },
 ];
 
@@ -155,9 +154,7 @@ const categories = partners.reduce((acc: string[], partner) => {
         }
     });
     return acc;
-}
-, []);
-
+}, []);
 
 export default function Partners() {
     const [activeFilters, setActiveFilters] = useState<string[]>([]);
@@ -167,8 +164,8 @@ export default function Partners() {
         if (activeFilters.length === 0) {
             setFilteredPartners(partners);
         } else {
-            const filtered = partners.filter(partner =>
-                partner.categories.some(category =>
+            const filtered = partners.filter((partner) =>
+                partner.categories.some((category) =>
                     activeFilters.includes(category)
                 )
             );
@@ -179,7 +176,9 @@ export default function Partners() {
 
     const toggleFilter = (category: string): void => {
         if (activeFilters.includes(category)) {
-            setActiveFilters(activeFilters.filter((filter: string) => filter !== category));
+            setActiveFilters(
+                activeFilters.filter((filter: string) => filter !== category)
+            );
         } else {
             setActiveFilters([...activeFilters, category]);
         }
@@ -203,14 +202,17 @@ export default function Partners() {
                         </h2>
 
                         <p className="mx-auto max-w-[800px] text-branding-white/80 text-xl sm:text-2xl">
-                            Working with industry leaders to build the future of data center infrastructure.
+                            Working with industry leaders to build the future of
+                            data center infrastructure.
                         </p>
                     </div>
 
                     <div className="max-w-[800px] mx-auto text-center mb-12">
                         <p className="text-branding-white/80 text-lg sm:text-xl">
-                            SPUR collaborates with best-in-class partners across technology, energy, security, and finance
-                            to deliver comprehensive data center solutions that meet the evolving needs of our clients.
+                            SPUR collaborates with best-in-class partners across
+                            technology, energy, security, and finance to deliver
+                            comprehensive data center solutions that meet the
+                            evolving needs of our clients.
                         </p>
                     </div>
 
@@ -221,9 +223,10 @@ export default function Partners() {
                                     key={category}
                                     className={`
                                         px-4 py-2 text-sm cursor-pointer transition-colors
-                                        ${activeFilters.includes(category)
-                                            ? 'bg-branding-orange/20 text-branding-orange border-branding-orange/30 hover:bg-branding-orange/30'
-                                            : 'bg-background/30 text-branding-white/80 border-branding-white/20 hover:bg-branding-orange/10 hover:text-branding-orange hover:border-branding-orange/20'
+                                        ${
+                                            activeFilters.includes(category)
+                                                ? 'bg-branding-orange/20 text-branding-orange border-branding-orange/30 hover:bg-branding-orange/30'
+                                                : 'bg-background/30 text-branding-white/80 border-branding-white/20 hover:bg-branding-orange/10 hover:text-branding-orange hover:border-branding-orange/20'
                                         }
                                     `}
                                     onClick={() => toggleFilter(category)}
@@ -236,9 +239,11 @@ export default function Partners() {
                         {activeFilters.length > 0 && (
                             <div className="flex justify-center mt-4">
                                 <div className="flex items-center gap-2 bg-background/30 border border-branding-white/20 rounded-full px-4 py-2">
-                                    <span className="text-sm text-branding-white/70">Active filters:</span>
+                                    <span className="text-sm text-branding-white/70">
+                                        Active filters:
+                                    </span>
                                     <div className="flex flex-wrap gap-2">
-                                        {activeFilters.map(filter => (
+                                        {activeFilters.map((filter) => (
                                             <Badge
                                                 key={filter}
                                                 className="bg-branding-orange/20 text-branding-orange border-branding-orange/30 flex items-center gap-1"
@@ -246,7 +251,9 @@ export default function Partners() {
                                                 {filter}
                                                 <X
                                                     className="h-3 w-3 cursor-pointer"
-                                                    onClick={() => toggleFilter(filter)}
+                                                    onClick={() =>
+                                                        toggleFilter(filter)
+                                                    }
                                                 />
                                             </Badge>
                                         ))}
@@ -266,7 +273,9 @@ export default function Partners() {
 
                     {filteredPartners.length === 0 ? (
                         <div className="text-center py-12 bg-background/30 border border-branding-white/10 rounded-xl">
-                            <p className="text-branding-white/70">No partners match your selected filters.</p>
+                            <p className="text-branding-white/70">
+                                No partners match your selected filters.
+                            </p>
                         </div>
                     ) : (
                         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -274,7 +283,9 @@ export default function Partners() {
                                 <Card
                                     key={i}
                                     className="group bg-background/30 border-branding-white/10 backdrop-blur-sm hover:border-branding-orange/30 hover:cursor-pointer transition-colors overflow-hidden"
-                                    onClick={() => window.open(partner.url, "_blank")}
+                                    onClick={() =>
+                                        window.open(partner.url, '_blank')
+                                    }
                                 >
                                     <CardContent className="p-6 flex flex-col items-center">
                                         <div className="w-full h-20 relative mb-4 transition-all duration-300">
@@ -287,21 +298,30 @@ export default function Partners() {
                                         </div>
 
                                         <div className="flex flex-wrap justify-center gap-2 mb-2">
-                                            {partner.categories.map(category => (
-                                                <Badge
-                                                    key={category}
-                                                    className={`
+                                            {partner.categories.map(
+                                                (category) => (
+                                                    <Badge
+                                                        key={category}
+                                                        className={`
                                                         text-xs
-                                                        ${activeFilters.includes(category)
-                                                            ? 'bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20'
-                                                            : 'bg-background/40 text-branding-white/70 hover:bg-branding-orange/30 border-branding-white/20'
+                                                        ${
+                                                            activeFilters.includes(
+                                                                category
+                                                            )
+                                                                ? 'bg-branding-orange/10 text-branding-orange hover:bg-branding-orange/30 border-branding-orange/20'
+                                                                : 'bg-background/40 text-branding-white/70 hover:bg-branding-orange/30 border-branding-white/20'
                                                         }
                                                     `}
-                                                    onClick={() => toggleFilter(category)}
-                                                >
-                                                    {category}
-                                                </Badge>
-                                            ))}
+                                                        onClick={() =>
+                                                            toggleFilter(
+                                                                category
+                                                            )
+                                                        }
+                                                    >
+                                                        {category}
+                                                    </Badge>
+                                                )
+                                            )}
                                         </div>
 
                                         <h3 className="text-branding-white font-medium text-lg mb-2 text-center">
@@ -329,16 +349,15 @@ export default function Partners() {
                                 </h3>
 
                                 <p className="text-branding-white/80 mb-6">
-                                    Join our ecosystem of industry-leading partners and help shape the future of data infrastructure.
-                                    We're constantly seeking innovative companies to collaborate with across our growing network of facilities.
+                                    Join our ecosystem of industry-leading
+                                    partners and help shape the future of data
+                                    infrastructure. We're constantly seeking
+                                    innovative companies to collaborate with
+                                    across our growing network of facilities.
                                 </p>
 
-                                <Button
-                                    className="bg-branding-orange hover:bg-branding-orange/90 text-branding-white group text-lg px-6 py-5"
-                                >
-                                    <Link href="/partner">
-                                        Partner with Us
-                                    </Link>
+                                <Button className="bg-branding-orange hover:bg-branding-orange/90 text-branding-white group text-lg px-6 py-5">
+                                    <Link href="/partner">Partner with Us</Link>
                                     <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
                                 </Button>
                             </div>

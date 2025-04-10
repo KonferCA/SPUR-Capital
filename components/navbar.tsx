@@ -17,7 +17,7 @@ const navLinks = [
             { name: 'Our Story', path: '/about#story' },
             { name: 'Mission', path: '/about#mission' },
             { name: 'Our Plans', path: '/about#overview' },
-        ]
+        ],
     },
     {
         name: 'Vision',
@@ -34,7 +34,7 @@ const navLinks = [
             { name: 'Market Analysis', path: '/assets#market' },
             { name: 'Capital Allocation', path: '/assets#capital' },
             { name: 'Financial Projections', path: '/assets#projections' },
-        ]
+        ],
     },
     {
         name: 'Locations',
@@ -48,9 +48,9 @@ const navLinks = [
         dropdown: [
             { name: 'Partnership Types', path: '/partners#types' },
             { name: 'Benefits', path: '/partners#benefits' },
-            { name: 'Become a Partner', path: '/partners#join' }
-        ]
-    }
+            { name: 'Become a Partner', path: '/partners#join' },
+        ],
+    },
 ];
 
 export default function Navbar() {
@@ -59,7 +59,9 @@ export default function Navbar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
     const [expandedItem, setExpandedItem] = useState<string | null>(null);
-    const [openDesktopDropdown, setOpenDesktopDropdown] = useState<string | null>(null);
+    const [openDesktopDropdown, setOpenDesktopDropdown] = useState<
+        string | null
+    >(null);
 
     useEffect(() => {
         const handleScroll = () => {
@@ -82,7 +84,10 @@ export default function Navbar() {
                     const element = document.getElementById(hash);
 
                     if (element) {
-                        element.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                        element.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start',
+                        });
                     }
                 }, 100);
             }
@@ -105,7 +110,9 @@ export default function Navbar() {
         const handleClickOutside = (event: MouseEvent) => {
             if (
                 openDesktopDropdown &&
-                !(event.target as HTMLElement).closest('.desktop-dropdown-container')
+                !(event.target as HTMLElement).closest(
+                    '.desktop-dropdown-container'
+                )
             ) {
                 setOpenDesktopDropdown(null);
             }
@@ -155,102 +162,155 @@ export default function Navbar() {
     return (
         <header
             className={cn(
-                "fixed top-0 z-40 w-full border-b border-branding-white/10 transition-all duration-300",
+                'fixed top-0 z-40 w-full border-b border-branding-white/10 transition-all duration-300',
                 scrolled
-                    ? "bg-background/90 backdrop-blur-md"
-                    : "bg-background/50 backdrop-blur-sm"
+                    ? 'bg-background/90 backdrop-blur-md'
+                    : 'bg-background/50 backdrop-blur-sm'
             )}
         >
             <div className="container mx-auto px-4 flex h-20 items-center justify-between">
                 <Link href="/" className="flex items-center space-x-3 z-30">
                     <SpurLogo className="h-10 w-10" />
 
-                    <span className="font-bold text-xl hidden sm:inline text-branding-white">SPUR Capital</span>
+                    <span className="font-bold text-xl hidden sm:inline text-branding-white">
+                        SPUR Capital
+                    </span>
                 </Link>
 
                 <div className="hidden lg:flex items-center space-x-4">
                     <div className="flex items-center">
                         {navLinks.map((link) => (
-                            <div key={link.name} className="relative desktop-dropdown-container px-1">
-                                {link.path === '/' ? (link.dropdown && link.dropdown.length > 0 ? (
-                                    <>
-                                        <button
-                                            className={cn(
-                                                "flex items-center h-10 px-4 text-base font-medium rounded-md text-branding-white hover:text-branding-orange focus:outline-none"
-                                            )}
-                                            onClick={() => toggleDesktopDropdown(link.name)}
-                                            aria-expanded={openDesktopDropdown === link.name}
-                                        >
-                                            {link.name}
+                            <div
+                                key={link.name}
+                                className="relative desktop-dropdown-container px-1"
+                            >
+                                {link.path === '/' ? (
+                                    link.dropdown &&
+                                    link.dropdown.length > 0 ? (
+                                        <>
+                                            <button
+                                                className={cn(
+                                                    'flex items-center h-10 px-4 text-base font-medium rounded-md text-branding-white hover:text-branding-orange focus:outline-none'
+                                                )}
+                                                onClick={() =>
+                                                    toggleDesktopDropdown(
+                                                        link.name
+                                                    )
+                                                }
+                                                aria-expanded={
+                                                    openDesktopDropdown ===
+                                                    link.name
+                                                }
+                                            >
+                                                {link.name}
 
-                                            <ChevronDown className={cn(
-                                                "ml-1 h-4 w-4 transition-transform",
-                                                openDesktopDropdown === link.name && "rotate-180"
-                                            )} />
-                                        </button>
+                                                <ChevronDown
+                                                    className={cn(
+                                                        'ml-1 h-4 w-4 transition-transform',
+                                                        openDesktopDropdown ===
+                                                            link.name &&
+                                                            'rotate-180'
+                                                    )}
+                                                />
+                                            </button>
 
-                                        <div className={cn(
-                                            "absolute left-0 mt-1 w-56 rounded-md shadow-lg transition-all duration-200 z-50",
-                                            openDesktopDropdown === link.name ? "opacity-100 visible" : "opacity-0 invisible"
-                                        )}>
-                                            <div className="rounded-md bg-background/95 backdrop-blur-md border border-branding-white/10 shadow-xs py-1">
-                                                <button
-                                                    onClick={() => handleSectionNavigation(link.scrollTo)}
-                                                    className="block w-full text-left px-4 py-2 text-base text-branding-white hover:bg-branding-orange/10 hover:text-branding-orange cursor-pointer"
-                                                >
-                                                    Overview
-                                                </button>
-
-                                                <div className="my-1 h-px w-full bg-branding-white/10" />
-
-                                                {link.dropdown.map((item) => (
-                                                    <Link
-                                                        key={item.name}
-                                                        href={item.path}
-                                                        className="block px-4 py-2 text-base text-branding-white hover:bg-branding-orange/10 hover:text-branding-orange"
-                                                        onClick={handleLinkClick}
+                                            <div
+                                                className={cn(
+                                                    'absolute left-0 mt-1 w-56 rounded-md shadow-lg transition-all duration-200 z-50',
+                                                    openDesktopDropdown ===
+                                                        link.name
+                                                        ? 'opacity-100 visible'
+                                                        : 'opacity-0 invisible'
+                                                )}
+                                            >
+                                                <div className="rounded-md bg-background/95 backdrop-blur-md border border-branding-white/10 shadow-xs py-1">
+                                                    <button
+                                                        onClick={() =>
+                                                            handleSectionNavigation(
+                                                                link.scrollTo
+                                                            )
+                                                        }
+                                                        className="block w-full text-left px-4 py-2 text-base text-branding-white hover:bg-branding-orange/10 hover:text-branding-orange cursor-pointer"
                                                     >
-                                                        {item.name}
-                                                    </Link>
-                                                ))}
+                                                        Overview
+                                                    </button>
+
+                                                    <div className="my-1 h-px w-full bg-branding-white/10" />
+
+                                                    {link.dropdown.map(
+                                                        (item) => (
+                                                            <Link
+                                                                key={item.name}
+                                                                href={item.path}
+                                                                className="block px-4 py-2 text-base text-branding-white hover:bg-branding-orange/10 hover:text-branding-orange"
+                                                                onClick={
+                                                                    handleLinkClick
+                                                                }
+                                                            >
+                                                                {item.name}
+                                                            </Link>
+                                                        )
+                                                    )}
+                                                </div>
                                             </div>
-                                        </div>
-                                    </>
-                                ) : (
-                                    <button
-                                        onClick={() => handleSectionNavigation(link.scrollTo)}
-                                        className={cn(
-                                            "flex items-center h-10 px-4 text-base font-medium rounded-md text-branding-white hover:text-branding-orange cursor-pointer"
-                                        )}
-                                    >
-                                        {link.name}
-                                    </button>
-                                )
-                            ) : (
-                                link.dropdown && link.dropdown.length > 0 ? (
+                                        </>
+                                    ) : (
+                                        <button
+                                            onClick={() =>
+                                                handleSectionNavigation(
+                                                    link.scrollTo
+                                                )
+                                            }
+                                            className={cn(
+                                                'flex items-center h-10 px-4 text-base font-medium rounded-md text-branding-white hover:text-branding-orange cursor-pointer'
+                                            )}
+                                        >
+                                            {link.name}
+                                        </button>
+                                    )
+                                ) : link.dropdown &&
+                                  link.dropdown.length > 0 ? (
                                     <>
                                         <button
                                             className={cn(
-                                                "flex items-center h-10 px-4 text-base font-medium rounded-md text-branding-white hover:text-branding-orange focus:outline-none"
+                                                'flex items-center h-10 px-4 text-base font-medium rounded-md text-branding-white hover:text-branding-orange focus:outline-none'
                                             )}
-                                            onClick={() => toggleDesktopDropdown(link.name)}
-                                            aria-expanded={openDesktopDropdown === link.name}
+                                            onClick={() =>
+                                                toggleDesktopDropdown(link.name)
+                                            }
+                                            aria-expanded={
+                                                openDesktopDropdown ===
+                                                link.name
+                                            }
                                         >
                                             {link.name}
 
-                                            <ChevronDown className={cn(
-                                                "ml-1 h-4 w-4 transition-transform",
-                                                openDesktopDropdown === link.name && "rotate-180"
-                                            )} />
+                                            <ChevronDown
+                                                className={cn(
+                                                    'ml-1 h-4 w-4 transition-transform',
+                                                    openDesktopDropdown ===
+                                                        link.name &&
+                                                        'rotate-180'
+                                                )}
+                                            />
                                         </button>
 
-                                        <div className={cn(
-                                            "absolute left-0 mt-1 w-56 rounded-md shadow-lg transition-all duration-200 z-50",
-                                            openDesktopDropdown === link.name ? "opacity-100 visible" : "opacity-0 invisible"
-                                        )}>
+                                        <div
+                                            className={cn(
+                                                'absolute left-0 mt-1 w-56 rounded-md shadow-lg transition-all duration-200 z-50',
+                                                openDesktopDropdown ===
+                                                    link.name
+                                                    ? 'opacity-100 visible'
+                                                    : 'opacity-0 invisible'
+                                            )}
+                                        >
                                             <div className="rounded-md bg-background/95 backdrop-blur-md border border-branding-white/10 shadow-xs py-1">
                                                 <button
-                                                    onClick={() => handleSectionNavigation(link.scrollTo)}
+                                                    onClick={() =>
+                                                        handleSectionNavigation(
+                                                            link.scrollTo
+                                                        )
+                                                    }
                                                     className="block w-full text-left px-4 py-2 text-base text-branding-white hover:bg-branding-orange/10 hover:text-branding-orange cursor-pointer"
                                                 >
                                                     Overview
@@ -263,7 +323,9 @@ export default function Navbar() {
                                                         key={item.name}
                                                         href={item.path}
                                                         className="block px-4 py-2 text-base text-branding-white hover:bg-branding-orange/10 hover:text-branding-orange"
-                                                        onClick={handleLinkClick}
+                                                        onClick={
+                                                            handleLinkClick
+                                                        }
                                                     >
                                                         {item.name}
                                                     </Link>
@@ -275,14 +337,13 @@ export default function Navbar() {
                                     <Link
                                         href={link.path}
                                         className={cn(
-                                        "flex items-center h-10 px-4 text-base font-medium rounded-md text-branding-white hover:text-branding-orange"
+                                            'flex items-center h-10 px-4 text-base font-medium rounded-md text-branding-white hover:text-branding-orange'
                                         )}
                                         onClick={handleLinkClick}
                                     >
                                         {link.name}
                                     </Link>
-                                )
-                            )}
+                                )}
                             </div>
                         ))}
                     </div>
@@ -299,9 +360,7 @@ export default function Navbar() {
                                 className="p-2 bg-branding-orange/10 rounded-full text-branding-orange hover:bg-branding-orange/20 transition-colors"
                             >
                                 <Linkedin className="h-5 w-5" />
-                                <span className="sr-only">
-                                    LinkedIn
-                                </span>
+                                <span className="sr-only">LinkedIn</span>
                             </Button>
                         </Link>
 
@@ -312,9 +371,7 @@ export default function Navbar() {
                             rel="noopener noreferrer"
                         >
                             <Twitter className="h-5 w-5" />
-                            <span className="sr-only">
-                                Twitter
-                            </span>
+                            <span className="sr-only">Twitter</span>
                         </Link>
 
                         <Button
@@ -322,7 +379,7 @@ export default function Navbar() {
                             size="default"
                             className="border border-branding-orange hover:bg-branding-orange text-branding-white font-medium px-6"
                         >
-                            <a 
+                            <a
                                 href="https://onboard.spuric.com"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -336,9 +393,7 @@ export default function Navbar() {
                             size="default"
                             className="bg-branding-orange hover:bg-branding-orange/90 text-branding-white font-medium px-6"
                         >
-                            <a href="mailto:info@spur.com">
-                                Contact
-                            </a>
+                            <a href="mailto:info@spur.com">Contact</a>
                         </Button>
                     </div>
                 </div>
@@ -348,11 +403,13 @@ export default function Navbar() {
                     size="icon"
                     className="lg:hidden z-50 hover:bg-branding-lightBlue/10 text-branding-white"
                     onClick={toggleMobileMenu}
-                    aria-label={mobileMenuOpen ? "Close menu" : "Open menu"}
+                    aria-label={mobileMenuOpen ? 'Close menu' : 'Open menu'}
                 >
-                    {mobileMenuOpen ? 
-                        <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />
-                    }
+                    {mobileMenuOpen ? (
+                        <X className="h-6 w-6" />
+                    ) : (
+                        <Menu className="h-6 w-6" />
+                    )}
 
                     <span className="sr-only">Toggle Menu</span>
                 </Button>
@@ -360,13 +417,17 @@ export default function Navbar() {
 
             <div
                 className={cn(
-                    "fixed inset-0 top-0 z-40 bg-black/95 backdrop-blur-lg lg:hidden overflow-y-auto transition-transform duration-300 ease-in-out",
-                    mobileMenuOpen ? "translate-x-0" : "translate-x-full"
+                    'fixed inset-0 top-0 z-40 bg-black/95 backdrop-blur-lg lg:hidden overflow-y-auto transition-transform duration-300 ease-in-out',
+                    mobileMenuOpen ? 'translate-x-0' : 'translate-x-full'
                 )}
                 style={{ height: '100vh' }}
             >
                 <div className="flex items-center justify-between h-20 px-4 border-b border-branding-white/10">
-                    <Link href="/" className="flex items-center space-x-3" onClick={handleLinkClick}>
+                    <Link
+                        href="/"
+                        className="flex items-center space-x-3"
+                        onClick={handleLinkClick}
+                    >
                         <SpurLogo className="h-10 w-10" />
 
                         <span className="font-bold text-xl text-branding-white">
@@ -388,53 +449,78 @@ export default function Navbar() {
                 <div className="container mx-auto px-4 py-8 flex flex-col h-[calc(100vh-5rem)] overflow-y-auto">
                     <nav className="flex flex-col space-y-0 text-lg font-medium">
                         {navLinks.map((link) => (
-                            <div key={link.name} className="border-b border-branding-white/10 py-1">
+                            <div
+                                key={link.name}
+                                className="border-b border-branding-white/10 py-1"
+                            >
                                 {link.path === '/' ? (
                                     <div className="flex flex-col">
                                         <div className="flex justify-between items-center">
                                             <button
-                                                onClick={() => handleSectionNavigation(link.scrollTo)}
+                                                onClick={() =>
+                                                    handleSectionNavigation(
+                                                        link.scrollTo
+                                                    )
+                                                }
                                                 className="py-4 text-lg font-medium transition-colors hover:text-branding-orange cursor-pointer w-full text-left"
                                             >
                                                 {link.name}
                                             </button>
 
-                                            {link.dropdown && link.dropdown.length > 0 && (
-                                                <Button
-                                                    variant="ghost"
-                                                    size="sm"
-                                                    className="hover:bg-transparent px-2 text-branding-white"
-                                                    onClick={() => toggleMobileExpanded(link.name)}
-                                                >
-                                                    <ChevronDown className={cn(
-                                                        "h-5 w-5 transition-transform",
-                                                        expandedItem === link.name && "rotate-180"
-                                                    )} />
-                                                </Button>
-                                            )}
+                                            {link.dropdown &&
+                                                link.dropdown.length > 0 && (
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="sm"
+                                                        className="hover:bg-transparent px-2 text-branding-white"
+                                                        onClick={() =>
+                                                            toggleMobileExpanded(
+                                                                link.name
+                                                            )
+                                                        }
+                                                    >
+                                                        <ChevronDown
+                                                            className={cn(
+                                                                'h-5 w-5 transition-transform',
+                                                                expandedItem ===
+                                                                    link.name &&
+                                                                    'rotate-180'
+                                                            )}
+                                                        />
+                                                    </Button>
+                                                )}
                                         </div>
 
-                                        {expandedItem === link.name && link.dropdown && (
-                                            <div className="pl-4 py-2 space-y-1 text-base border-t border-branding-white/5">
-                                                <button
-                                                    onClick={() => handleSectionNavigation(link.scrollTo)}
-                                                    className="block py-3 text-branding-white hover:text-branding-orange w-full text-left"
-                                                >
-                                                    Overview
-                                                </button>
-
-                                                {link.dropdown.map((item) => (
-                                                    <Link
-                                                        key={item.name}
-                                                        href={item.path}
-                                                        className="block py-3 text-branding-white/80 hover:text-branding-orange"
-                                                        onClick={handleLinkClick}
+                                        {expandedItem === link.name &&
+                                            link.dropdown && (
+                                                <div className="pl-4 py-2 space-y-1 text-base border-t border-branding-white/5">
+                                                    <button
+                                                        onClick={() =>
+                                                            handleSectionNavigation(
+                                                                link.scrollTo
+                                                            )
+                                                        }
+                                                        className="block py-3 text-branding-white hover:text-branding-orange w-full text-left"
                                                     >
-                                                        {item.name}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        )}
+                                                        Overview
+                                                    </button>
+
+                                                    {link.dropdown.map(
+                                                        (item) => (
+                                                            <Link
+                                                                key={item.name}
+                                                                href={item.path}
+                                                                className="block py-3 text-branding-white/80 hover:text-branding-orange"
+                                                                onClick={
+                                                                    handleLinkClick
+                                                                }
+                                                            >
+                                                                {item.name}
+                                                            </Link>
+                                                        )
+                                                    )}
+                                                </div>
+                                            )}
                                     </div>
                                 ) : (
                                     <div className="flex flex-col">
@@ -447,42 +533,60 @@ export default function Navbar() {
                                                 {link.name}
                                             </Link>
 
-                                            {link.dropdown && link.dropdown.length > 0 && (
-                                                <Button
-                                                    variant="ghost"
-                                                    size="sm"
-                                                    className="hover:bg-transparent px-2 text-branding-white"
-                                                    onClick={() => toggleMobileExpanded(link.name)}
-                                                >
-                                                    <ChevronDown className={cn(
-                                                        "h-5 w-5 transition-transform",
-                                                        expandedItem === link.name && "rotate-180"
-                                                    )} />
-                                                </Button>
-                                            )}
+                                            {link.dropdown &&
+                                                link.dropdown.length > 0 && (
+                                                    <Button
+                                                        variant="ghost"
+                                                        size="sm"
+                                                        className="hover:bg-transparent px-2 text-branding-white"
+                                                        onClick={() =>
+                                                            toggleMobileExpanded(
+                                                                link.name
+                                                            )
+                                                        }
+                                                    >
+                                                        <ChevronDown
+                                                            className={cn(
+                                                                'h-5 w-5 transition-transform',
+                                                                expandedItem ===
+                                                                    link.name &&
+                                                                    'rotate-180'
+                                                            )}
+                                                        />
+                                                    </Button>
+                                                )}
                                         </div>
 
-                                        {expandedItem === link.name && link.dropdown && (
-                                            <div className="pl-4 py-2 space-y-1 text-base border-t border-branding-white/5">
-                                                <button
-                                                    onClick={() => handleSectionNavigation(link.scrollTo)}
-                                                    className="block py-3 text-branding-white hover:text-branding-orange w-full text-left"
-                                                >
-                                                    Overview
-                                                </button>
-
-                                                {link.dropdown.map((item) => (
-                                                    <Link
-                                                        key={item.name}
-                                                        href={item.path}
-                                                        className="block py-3 text-branding-white/80 hover:text-branding-orange"
-                                                        onClick={handleLinkClick}
+                                        {expandedItem === link.name &&
+                                            link.dropdown && (
+                                                <div className="pl-4 py-2 space-y-1 text-base border-t border-branding-white/5">
+                                                    <button
+                                                        onClick={() =>
+                                                            handleSectionNavigation(
+                                                                link.scrollTo
+                                                            )
+                                                        }
+                                                        className="block py-3 text-branding-white hover:text-branding-orange w-full text-left"
                                                     >
-                                                        {item.name}
-                                                    </Link>
-                                                ))}
-                                            </div>
-                                        )}
+                                                        Overview
+                                                    </button>
+
+                                                    {link.dropdown.map(
+                                                        (item) => (
+                                                            <Link
+                                                                key={item.name}
+                                                                href={item.path}
+                                                                className="block py-3 text-branding-white/80 hover:text-branding-orange"
+                                                                onClick={
+                                                                    handleLinkClick
+                                                                }
+                                                            >
+                                                                {item.name}
+                                                            </Link>
+                                                        )
+                                                    )}
+                                                </div>
+                                            )}
                                     </div>
                                 )}
                             </div>
@@ -498,9 +602,7 @@ export default function Navbar() {
                             onClick={handleLinkClick}
                         >
                             <Linkedin className="h-6 w-6" />
-                            <span>
-                                Follow us on LinkedIn
-                            </span>
+                            <span>Follow us on LinkedIn</span>
                         </Link>
 
                         <Link
@@ -511,9 +613,7 @@ export default function Navbar() {
                             onClick={handleLinkClick}
                         >
                             <Twitter className="h-6 w-6" />
-                            <span>
-                                Follow us on Twitter
-                            </span>
+                            <span>Follow us on Twitter</span>
                         </Link>
 
                         <Button
@@ -521,7 +621,7 @@ export default function Navbar() {
                             size="default"
                             className="border border-branding-orange hover:bg-branding-orange text-branding-white text-lg py-6"
                         >
-                            <a 
+                            <a
                                 href="https://onboard.spuric.com"
                                 rel="noopener noreferrer"
                                 target="_blank"
@@ -536,9 +636,7 @@ export default function Navbar() {
                             className="bg-branding-orange hover:bg-branding-orange/90 text-branding-white font-medium w-full text-lg py-6"
                             onClick={handleLinkClick}
                         >
-                            <a href="mailto:info@spur.com">
-                                Contact Us
-                            </a>
+                            <a href="mailto:info@spur.com">Contact Us</a>
                         </Button>
                     </div>
                 </div>

@@ -1,6 +1,14 @@
 'use client';
 
-import { Building2, Factory, Server, Warehouse, MapPin, ArrowRight, Users } from 'lucide-react';
+import {
+    Building2,
+    Factory,
+    Server,
+    Warehouse,
+    MapPin,
+    ArrowRight,
+    Users,
+} from 'lucide-react';
 import { Badge } from '@/components/ui/badge';
 import { Card, CardContent } from '@/components/ui/card';
 import SectionWrapper from './section-wrapper';
@@ -36,7 +44,7 @@ const waterlooImages = [
     WaterlooCampus10,
     WaterlooCampus11,
     WaterlooCampus12,
-    WaterlooCampus13
+    WaterlooCampus13,
 ];
 
 const cities = [
@@ -44,12 +52,26 @@ const cities = [
         name: 'Kitchener / Waterloo Region',
         country: 'Canada',
         sqft: '1,000,000+',
-        spaces: ['Flex Industrial', 'Data Center', 'R&D Labs + Offices', 'Innovation Hub', 'Private Office Space', 'Co-Working Space'],
+        spaces: [
+            'Flex Industrial',
+            'Data Center',
+            'R&D Labs + Offices',
+            'Innovation Hub',
+            'Private Office Space',
+            'Co-Working Space',
+        ],
         occupancy: '95%',
         icon: Server,
-        highlights: ['24/7 Security', 'Fiber Connection', 'Innovation Hub', 'Tech Campus', 'Premium Office Space'],
-        description: 'Our flagship location featuring private and co-share office space right in the heart of Waterloo Region tech hub, cutting-edge cooling systems and direct connection to major network exchanges.',
-        featured: true
+        highlights: [
+            '24/7 Security',
+            'Fiber Connection',
+            'Innovation Hub',
+            'Tech Campus',
+            'Premium Office Space',
+        ],
+        description:
+            'Our flagship location featuring private and co-share office space right in the heart of Waterloo Region tech hub, cutting-edge cooling systems and direct connection to major network exchanges.',
+        featured: true,
     },
     {
         name: 'Mirabel / Montreal',
@@ -59,7 +81,8 @@ const cities = [
         occupancy: '90%',
         icon: Building2,
         highlights: ['AI Research', 'Innovation Campus', 'Strategic Location'],
-        description: 'Purpose-built tech campus with integrated data center operations and collaborative innovation spaces.'
+        description:
+            'Purpose-built tech campus with integrated data center operations and collaborative innovation spaces.',
     },
     {
         name: 'Ottawa',
@@ -69,7 +92,8 @@ const cities = [
         occupancy: '88%',
         icon: Factory,
         highlights: ['AI Research', 'Strategic Location'],
-        description: 'Our largest facility, leveraging Quebec\'s low-cost renewable energy and cold climate for optimal efficiency.'
+        description:
+            "Our largest facility, leveraging Quebec's low-cost renewable energy and cold climate for optimal efficiency.",
     },
     {
         name: 'Alberta',
@@ -79,16 +103,20 @@ const cities = [
         occupancy: '92%',
         icon: Warehouse,
         highlights: ['Edge Computing', 'Strategic Location'],
-        description: 'Strategically positioned facility with excellent connectivity to western markets.'
+        description:
+            'Strategically positioned facility with excellent connectivity to western markets.',
     },
 ];
 
 function CampusCarousel() {
-    const [emblaRef, emblaApi] = useEmblaCarousel({
-        loop: true,
-        align: 'center',
-        slidesToScroll: 1
-    }, [Autoplay({ delay: 3000, stopOnInteraction: false })]);
+    const [emblaRef, emblaApi] = useEmblaCarousel(
+        {
+            loop: true,
+            align: 'center',
+            slidesToScroll: 1,
+        },
+        [Autoplay({ delay: 3000, stopOnInteraction: false })]
+    );
 
     const [_, setSelectedIndex] = useState(0);
 
@@ -113,7 +141,10 @@ function CampusCarousel() {
             <div className="overflow-hidden h-full w-full" ref={emblaRef}>
                 <div className="flex h-full">
                     {waterlooImages.map((src, index) => (
-                        <div className="relative flex-[0_0_100%] h-full" key={index}>
+                        <div
+                            className="relative flex-[0_0_100%] h-full"
+                            key={index}
+                        >
                             <Image
                                 src={src}
                                 alt={`Waterloo Campus View ${index + 1}`}
@@ -133,13 +164,13 @@ function CampusCarousel() {
                         key={index}
                         className={`w-3 h-3 rounded-full transition-colors pointer-events-auto ${
                             emblaApi?.selectedScrollSnap() === index
-                                ? "bg-branding-orange"
-                                : "bg-white/30 hover:bg-white/50"
+                                ? 'bg-branding-orange'
+                                : 'bg-white/30 hover:bg-white/50'
                         }`}
                         onClick={(e) => {
                             e.preventDefault();
                             e.stopPropagation();
-                            emblaApi?.scrollTo(index)
+                            emblaApi?.scrollTo(index);
                         }}
                         aria-label={`Go to slide ${index + 1}`}
                     />
@@ -149,8 +180,12 @@ function CampusCarousel() {
     );
 }
 
-const featuredCity = cities.find(city => city.name === 'Kitchener / Waterloo Region');
-const otherCities = cities.filter(city => city.name !== 'Kitchener / Waterloo Region');
+const featuredCity = cities.find(
+    (city) => city.name === 'Kitchener / Waterloo Region'
+);
+const otherCities = cities.filter(
+    (city) => city.name !== 'Kitchener / Waterloo Region'
+);
 
 export default function Locations() {
     return (
@@ -170,15 +205,18 @@ export default function Locations() {
 
                         <p className="mx-auto max-w-[800px] text-branding-white/80 text-xl sm:text-2xl">
                             Strategic presence across major Canadian tech hubs,
-                            providing state-of-the-art facilities and infrastructure.
+                            providing state-of-the-art facilities and
+                            infrastructure.
                         </p>
                     </div>
 
                     <div className="max-w-[800px] mx-auto text-center mb-12">
                         <p className="text-branding-white/80 text-lg sm:text-xl">
-                            SPUR's data centers are strategically located in Canada's technology corridors,
-                            offering clients access to reliable infrastructure, renewable energy sources,
-                            and optimal connectivity with minimal latency.
+                            SPUR's data centers are strategically located in
+                            Canada's technology corridors, offering clients
+                            access to reliable infrastructure, renewable energy
+                            sources, and optimal connectivity with minimal
+                            latency.
                         </p>
                     </div>
 
@@ -218,19 +256,50 @@ export default function Locations() {
 
                                             <div className="flex items-center mb-4 text-branding-white/80">
                                                 <Users className="h-5 w-5 text-branding-orange mr-2" />
-                                                <span className="font-medium text-lg">Premium Office Space Available</span>
+                                                <span className="font-medium text-lg">
+                                                    Premium Office Space
+                                                    Available
+                                                </span>
                                             </div>
 
                                             <p className="text-branding-white/70 mb-6 text-center text-md">
-                                                Private and co-share office space right in the heart of Waterloo Region Tech Hub.
+                                                Private and co-share office
+                                                space right in the heart of
+                                                Waterloo Region Tech Hub.
                                             </p>
 
                                             <p className="text-branding-white/70 mb-6">
-                                                &#x2794; SPUR launched the co-working phenomenon. It emphasizes both community and convenience. <br /> <br />
-                                                &#x2794; We offer custom spaces for all kinds of local startups, as well as full-sized companies. <br /> <br />
-                                                &#x2794; With 4 different locations speckled throughout Kitchener-Waterloo our offices conveniently located next to major Universities, Colleges, and big companies, such as Google, Toyota, Research in Motion, OpenText, Manulife, Sunlife, and many more.  <br /><br />
-                                                &#x2794; All our locations are easily accessible by public transportation and conveniently located near commercial districts and boutique shops. <br /><br />
-                                                &#x2794; Members get access to amenities such as coffee, 24/7 space access, printing services, daily cleaning, mailing services access to conference rooms and much more.
+                                                &#x2794; SPUR launched the
+                                                co-working phenomenon. It
+                                                emphasizes both community and
+                                                convenience. <br /> <br />
+                                                &#x2794; We offer custom spaces
+                                                for all kinds of local startups,
+                                                as well as full-sized companies.{' '}
+                                                <br /> <br />
+                                                &#x2794; With 4 different
+                                                locations speckled throughout
+                                                Kitchener-Waterloo our offices
+                                                conveniently located next to
+                                                major Universities, Colleges,
+                                                and big companies, such as
+                                                Google, Toyota, Research in
+                                                Motion, OpenText, Manulife,
+                                                Sunlife, and many more. <br />
+                                                <br />
+                                                &#x2794; All our locations are
+                                                easily accessible by public
+                                                transportation and conveniently
+                                                located near commercial
+                                                districts and boutique shops.{' '}
+                                                <br />
+                                                <br />
+                                                &#x2794; Members get access to
+                                                amenities such as coffee, 24/7
+                                                space access, printing services,
+                                                daily cleaning, mailing services
+                                                access to conference rooms and
+                                                much more.
                                             </p>
                                         </div>
 
@@ -241,7 +310,8 @@ export default function Locations() {
                                                         Facility Size
                                                     </h4>
                                                     <span className="text-branding-orange font-bold">
-                                                        {featuredCity.sqft} sq ft
+                                                        {featuredCity.sqft} sq
+                                                        ft
                                                     </span>
                                                 </div>
 
@@ -249,11 +319,14 @@ export default function Locations() {
                                                     <div className="flex-1 h-2 bg-branding-white/10 rounded-full overflow-hidden">
                                                         <div
                                                             className="h-full bg-branding-orange transition-all"
-                                                            style={{ width: featuredCity.occupancy }}
+                                                            style={{
+                                                                width: featuredCity.occupancy,
+                                                            }}
                                                         />
                                                     </div>
                                                     <span className="text-sm font-medium text-branding-white/80 whitespace-nowrap">
-                                                        {featuredCity.occupancy} Occupied
+                                                        {featuredCity.occupancy}{' '}
+                                                        Occupied
                                                     </span>
                                                 </div>
                                             </div>
@@ -263,14 +336,16 @@ export default function Locations() {
                                                     Available Spaces
                                                 </h4>
                                                 <div className="flex flex-wrap gap-2">
-                                                    {featuredCity.spaces.map((space) => (
-                                                        <Badge
-                                                            key={space}
-                                                            className="bg-branding-orange/10 hover:bg-branding-orange/30 text-branding-orange border-branding-orange/20"
-                                                        >
-                                                            {space}
-                                                        </Badge>
-                                                    ))}
+                                                    {featuredCity.spaces.map(
+                                                        (space) => (
+                                                            <Badge
+                                                                key={space}
+                                                                className="bg-branding-orange/10 hover:bg-branding-orange/30 text-branding-orange border-branding-orange/20"
+                                                            >
+                                                                {space}
+                                                            </Badge>
+                                                        )
+                                                    )}
                                                 </div>
                                             </div>
 
@@ -279,15 +354,17 @@ export default function Locations() {
                                                     Facility Highlights
                                                 </h4>
                                                 <div className="flex flex-wrap gap-2">
-                                                    {featuredCity.highlights.map((highlight) => (
-                                                        <Badge
-                                                            key={highlight}
-                                                            variant="outline"
-                                                            className="text-branding-white/80 hover:bg-branding-orange/30 border-branding-white/20"
-                                                        >
-                                                            {highlight}
-                                                        </Badge>
-                                                    ))}
+                                                    {featuredCity.highlights.map(
+                                                        (highlight) => (
+                                                            <Badge
+                                                                key={highlight}
+                                                                variant="outline"
+                                                                className="text-branding-white/80 hover:bg-branding-orange/30 border-branding-white/20"
+                                                            >
+                                                                {highlight}
+                                                            </Badge>
+                                                        )
+                                                    )}
                                                 </div>
                                             </div>
 
@@ -306,8 +383,10 @@ export default function Locations() {
 
                             <div className="mt-6 text-center">
                                 <p className="text-branding-white/80">
-                                    Our Kitchener/Waterloo location is highly sought after with limited availability.
-                                    Contact us today to secure your space in this premier technology hub.
+                                    Our Kitchener/Waterloo location is highly
+                                    sought after with limited availability.
+                                    Contact us today to secure your space in
+                                    this premier technology hub.
                                 </p>
                             </div>
                         </div>
@@ -364,11 +443,14 @@ export default function Locations() {
                                                     <div className="flex-1 h-2 bg-branding-white/10 rounded-full overflow-hidden">
                                                         <div
                                                             className="h-full bg-branding-orange transition-all"
-                                                            style={{ width: city.occupancy }}
+                                                            style={{
+                                                                width: city.occupancy,
+                                                            }}
                                                         />
                                                     </div>
                                                     <span className="text-sm font-medium text-branding-white/80 whitespace-nowrap">
-                                                        {city.occupancy} Occupied
+                                                        {city.occupancy}{' '}
+                                                        Occupied
                                                     </span>
                                                 </div>
                                             </div>
@@ -378,14 +460,16 @@ export default function Locations() {
                                                     Available Spaces
                                                 </h4>
                                                 <div className="flex flex-wrap gap-2">
-                                                    {city.spaces.map((space) => (
-                                                        <Badge
-                                                            key={space}
-                                                            className="bg-branding-orange/10 hover:bg-branding-orange/30 text-branding-orange border-branding-orange/20"
-                                                        >
-                                                            {space}
-                                                        </Badge>
-                                                    ))}
+                                                    {city.spaces.map(
+                                                        (space) => (
+                                                            <Badge
+                                                                key={space}
+                                                                className="bg-branding-orange/10 hover:bg-branding-orange/30 text-branding-orange border-branding-orange/20"
+                                                            >
+                                                                {space}
+                                                            </Badge>
+                                                        )
+                                                    )}
                                                 </div>
                                             </div>
 
@@ -394,15 +478,17 @@ export default function Locations() {
                                                     Facility Highlights
                                                 </h4>
                                                 <div className="flex flex-wrap gap-2">
-                                                    {city.highlights.map((highlight) => (
-                                                        <Badge
-                                                            key={highlight}
-                                                            variant="outline"
-                                                            className="text-branding-white/80 hover:bg-branding-orange/30 border-branding-white/20"
-                                                        >
-                                                            {highlight}
-                                                        </Badge>
-                                                    ))}
+                                                    {city.highlights.map(
+                                                        (highlight) => (
+                                                            <Badge
+                                                                key={highlight}
+                                                                variant="outline"
+                                                                className="text-branding-white/80 hover:bg-branding-orange/30 border-branding-white/20"
+                                                            >
+                                                                {highlight}
+                                                            </Badge>
+                                                        )
+                                                    )}
                                                 </div>
                                             </div>
                                         </div>
@@ -416,8 +502,10 @@ export default function Locations() {
 
                     <div className="text-center space-y-8 max-w-3xl mx-auto">
                         <p className="text-branding-white/80 text-lg">
-                            Our facilities are designed to meet the demanding requirements of AI and quantum computing,
-                            with expandable capacity to support our clients' growth needs and specialized infrastructure.
+                            Our facilities are designed to meet the demanding
+                            requirements of AI and quantum computing, with
+                            expandable capacity to support our clients' growth
+                            needs and specialized infrastructure.
                         </p>
                     </div>
                 </div>
