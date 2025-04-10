@@ -9,7 +9,7 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, X } from 'lucide-react';
 import SectionWrapper from './section-wrapper';
 
-import BlackBerry from '@/public/assets/partners/blackberry.jpg';
+import BlackBerry from '@/public/assets/partners/blackberry.svg';
 import QNX from '@/public/assets/partners/qnx.svg';
 import Purolator from '@/public/assets/partners/purolator.webp';
 import Avidbots from '@/public/assets/partners/avidbots.svg';
@@ -23,7 +23,7 @@ import FareEats from '@/public/assets/partners/fare-eats.png';
 import Nicoya from '@/public/assets/partners/nicoya.png';
 import Crawford from '@/public/assets/partners/crawford.png';
 import Molex from '@/public/assets/partners/molex.png';
-import MagnetForensics from '@/public/assets/partners/magnet.jpg';
+import MagnetForensics from '@/public/assets/partners/magnet.png';
 import WSIB from '@/public/assets/partners/wsib.svg';
 import Konfer from '@/public/assets/partners/konfer.svg';
 import Partnerships from '@/public/assets/partnerships.jpg';
@@ -49,7 +49,7 @@ const partners = [
         name: 'Purolator',
         logo: Purolator,
         categories: ['Logistics'],
-        Description: 'Logistics and supply chain solutions.',
+        description: 'Logistics and supply chain solutions.',
         url: 'https://purolator.com/en',
     },
     {
@@ -83,6 +83,7 @@ const partners = [
     {
         name: 'Alchemy',
         logo: Alchemy,
+        logoColor: "red",
         categories: ['Software', 'Nanotechnology'],
         description: 'Next generation coatings powered by nanotechnology.',
         url: 'https://alchemynano.com/',
@@ -294,6 +295,7 @@ export default function Partners() {
                                                 alt={partner.name}
                                                 fill
                                                 className="object-contain"
+                                                color={partner.logoColor ?? undefined}
                                             />
                                         </div>
 
