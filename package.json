@@ -10,7 +10,7 @@
         "lint:fix": "biome lint --write .",
         "format": "biome format .",
         "format:fix": "biome format --write .",
-        "deploy": "next build && vercel --prod"
+        "push": "next build && vercel --prod"
     },
     "dependencies": {
         "@radix-ui/react-dialog": "^1.1.6",
