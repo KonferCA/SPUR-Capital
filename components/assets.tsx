@@ -7,7 +7,7 @@ import Link from 'next/link';
 
 const assets = [
     {
-        title: '$500M+ Assets Under Management',
+        title: '$1B+ Assets Under Management',
         description:
             '6 Operational Datacenters with strategic locations in key markets. Currently, all data centers are leased to 95% occupancy.',
         icon: Building2,
@@ -38,22 +38,22 @@ export default function Assets() {
                         <Badge className="bg-branding-orange/20 text-branding-orange border hover:bg-branding-orange/30 border-branding-orange/30 px-4 py-1.5 text-sm font-medium tracking-wide uppercase">
                             Financial Growth
                         </Badge>
-                        
+
                         <h2 className="bg-gradient-to-br from-branding-white from-30% via-branding-white/90 to-branding-white/70 bg-clip-text text-4xl font-bold tracking-tight text-transparent sm:text-5xl md:text-6xl">
                             Our Assets
                         </h2>
 
                         <span className="block w-16 h-1 bg-branding-orange mt-4 mx-auto rounded-full" />
-                        
+
                         <p className="mx-auto max-w-[800px] text-branding-white/80 text-xl sm:text-2xl">
                             SPUR manages a growing portfolio of data center assets,
                             delivering exceptional value through strategic acquisitions.
                         </p>
                     </div>
-                    
+
                     <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
                         {assets.map((asset) => (
-                            <Card 
+                            <Card
                                 key={asset.title}
                                 className="group relative overflow-hidden border border-branding-white/10 bg-background/30 backdrop-blur-sm hover:border-branding-orange/30 transition-colors h-full"
                             >
@@ -67,30 +67,30 @@ export default function Assets() {
                                             {asset.badge}
                                         </Badge>
                                     </div>
-                                    
+
                                     <h3 className="text-xl font-bold mb-2 text-branding-white group-hover:text-branding-orange transition-colors">
                                         {asset.title}
                                     </h3>
-                                    
+
                                     <p className="text-branding-white/70 flex-grow">
                                         {asset.description}
                                     </p>
-                                    
+
                                     <div className="absolute inset-0 bg-gradient-to-tr from-branding-orange/5 via-transparent to-branding-lightBlue/5 opacity-0 group-hover:opacity-100 transition-opacity" />
                                 </CardContent>
                             </Card>
                         ))}
                     </div>
-                    
+
                     <div className="text-center space-y-6 max-w-3xl mx-auto">
                         <p className="text-branding-white/80 text-lg">
-                            Our growth strategy combines disciplined capital allocation with technical expertise, 
-                            allowing us to deliver exceptional returns for our investors while meeting the growing 
+                            Our growth strategy combines disciplined capital allocation with technical expertise,
+                            allowing us to deliver exceptional returns for our investors while meeting the growing
                             demand for advanced computing infrastructure.
                         </p>
-                        
+
                         <div className="pt-4">
-                            <Button 
+                            <Button
                                 className="bg-branding-orange hover:bg-branding-orange/90 text-branding-white group text-lg px-8 py-6 w-full sm:w-auto"
                             >
                                 <Link
