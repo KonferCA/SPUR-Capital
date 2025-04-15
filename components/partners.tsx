@@ -13,7 +13,6 @@ import BlackBerry from '@/public/assets/partners/blackberry.svg';
 import QNX from '@/public/assets/partners/qnx.svg';
 import Purolator from '@/public/assets/partners/purolator.webp';
 import Avidbots from '@/public/assets/partners/avidbots.svg';
-import Ascension from '@/public/assets/partners/ascension.png';
 import FluidAI from '@/public/assets/partners/fluidai.png';
 import Cloudwifi from '@/public/assets/partners/cloudwifi.png';
 import Alchemy from '@/public/assets/partners/alchemy.svg';
@@ -58,13 +57,6 @@ const partners = [
         categories: ['AI', 'Cleaning', 'Engineering'],
         description: 'Autonomous cleaning robots and solutions.',
         url: 'https://avidbots.com/',
-    },
-    {
-        name: 'Ascension Automation Solutions',
-        logo: Ascension,
-        categories: ['Engineering'],
-        description: 'Automation solutions for manufacturing and logistics.',
-        url: 'https://ascensionas.ca/',
     },
     {
         name: 'FluidAI',
