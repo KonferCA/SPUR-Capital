@@ -1,6 +1,6 @@
 import './globals.css';
 import type React from 'react';
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import { Roboto } from 'next/font/google';
 import MouseMoveEffect from '@/components/mouse-move-effect';
 
@@ -41,4 +41,8 @@ export default function RootLayout({
             </body>
         </html>
     );
+}
+
+export const viewport: Viewport = {
+  themeColor: 'black',
 }
