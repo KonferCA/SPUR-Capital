@@ -9,6 +9,12 @@ import { Card, CardContent } from '@/components/ui/card';
 import { ArrowRight, X } from 'lucide-react';
 import SectionWrapper from './section-wrapper';
 
+import AMD from '@/public/assets/partners/amd.svg';
+import Nvidia from '@/public/assets/partners/nvidia.svg';
+import Dell from '@/public/assets/partners/dell.svg';
+import Lenovo from '@/public/assets/partners/lenovo.png';
+import Supermicro from '@/public/assets/partners/supermicro.svg';
+
 import BlackBerry from '@/public/assets/partners/blackberry.svg';
 import QNX from '@/public/assets/partners/qnx.svg';
 import Purolator from '@/public/assets/partners/purolator.webp';
@@ -26,10 +32,46 @@ import MagnetForensics from '@/public/assets/partners/magnet.png';
 import WSIB from '@/public/assets/partners/wsib.svg';
 import Konfer from '@/public/assets/partners/konfer.svg';
 import Partnerships from '@/public/assets/partnerships.jpg';
+
 import { log } from 'console';
 import { Description } from '@radix-ui/react-dialog';
 
 const partners = [
+    {
+        name: 'AMD',
+        logo: AMD,
+        categories: ['Hardware'],
+        description: 'Advanced Micro Devices, Inc.',
+        url: 'https://amd.com/',
+    },
+    {
+        name: 'Nvidia',
+        logo: Nvidia,
+        categories: ['Hardware'],
+        description: 'Graphics processing units and AI computing.',
+        url: 'https://nvidia.com/',
+    },
+    {
+        name: 'Dell',
+        logo: Dell,
+        categories: ['Hardware'],
+        description: 'Computing solutions and services.',
+        url: 'https://dell.com/',
+    },
+    {
+        name: 'Lenovo',
+        logo: Lenovo,
+        categories: ['Hardware'],
+        description: 'Innovative computing solutions and services.',
+        url: 'https://lenovo.com/',
+    },
+    {
+        name: 'Supermicro',
+        logo: Supermicro,
+        categories: ['Hardware'],
+        description: 'High-performance server solutions.',
+        url: 'https://www.supermicro.com/en/',
+    },
     {
         name: 'BlackBerry',
         logo: BlackBerry,
