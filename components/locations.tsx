@@ -60,17 +60,17 @@ const cities = [
             'Private Innovation Space',
             'Co-Working Space',
         ],
-        occupancy: '95%',
+        occupancy: '100%',
         icon: Server,
         highlights: [
             '24/7 Security',
             'Fiber Connection',
             'Innovation Hub',
             'Tech Campus',
-            'Premium Innovation Space',
+            'World-class Innovation Space',
         ],
         description:
-            'Our flagship location featuring private and co-share innovation space right in the heart of Waterloo Region tech hub, cutting-edge cooling systems and direct connection to major network exchanges.',
+            'Our flagship location featuring bespoke innovation space right in the heart of the Waterloo Region tech hub, cutting-edge infrastructure and direct connection to major network exchanges.',
         featured: true,
     },
     {
@@ -78,33 +78,30 @@ const cities = [
         country: 'Canada',
         sqft: '100,000',
         spaces: ['Flex Industrial', 'Data Center', 'R&D Labs + Offices'],
-        occupancy: '90%',
+        occupancy: '100%',
         icon: Building2,
         highlights: ['AI Research', 'Innovation Campus', 'Strategic Location'],
-        description:
-            'Purpose-built tech campus with integrated data center operations and collaborative innovation spaces.',
+        description: 'Purpose-built tech campus with integrated data center operations and collaborative innovation spaces.',
     },
     {
         name: 'Mirabel / Montreal Ottawa',
         country: 'Canada',
-        sqft: '70,000',
+        sqft: '110,000',
         spaces: ['Flex Industrial', 'Data Center', 'R&D Labs + Offices'],
-        occupancy: '88%',
+        occupancy: '100%',
         icon: Factory,
         highlights: ['AI Research', 'Strategic Location'],
-        description:
-            "Our largest facility, leveraging Quebec's low-cost renewable energy and cold climate for optimal efficiency.",
+        description: "Leveraging Quebec's low-cost renewable energy and cold climate for optimal efficiency.",
     },
     {
         name: 'Alberta',
         country: 'Canada',
         sqft: '10,000',
         spaces: ['Flex Industrial', 'Data Center', 'R&D Labs + Offices'],
-        occupancy: '92%',
+        occupancy: '100%',
         icon: Warehouse,
         highlights: ['Edge Computing', 'Strategic Location'],
-        description:
-            'Strategically positioned facility with excellent connectivity to western markets.',
+        description: 'Strategically positioned facility with excellent connectivity to western markets.',
     },
 ];
 
@@ -257,50 +254,17 @@ export default function Locations() {
                                             <div className="flex items-center mb-4 text-branding-white/80">
                                                 <Users className="h-5 w-5 text-branding-orange mr-2" />
                                                 <span className="font-medium text-lg">
-                                                    Premium Innovation Space
-                                                    Available
+                                                    World-class data center, flex tech, lab, industrial, and innovation spaces.
                                                 </span>
                                             </div>
 
-                                            <p className="text-branding-white/70 mb-6 text-center text-md">
-                                                Private and co-share office
-                                                space right in the heart of
-                                                Waterloo Region Tech Hub.
-                                            </p>
-
-                                            <p className="text-branding-white/70 mb-6">
-                                                &#x2794; SPUR launched the
-                                                co-working phenomenon. It
-                                                emphasizes both community and
-                                                convenience. <br /> <br />
-                                                &#x2794; We offer custom spaces
-                                                for all kinds of local startups,
-                                                as well as full-sized companies.{' '}
-                                                <br /> <br />
-                                                &#x2794; With 4 different
-                                                locations speckled throughout
-                                                Kitchener-Waterloo our offices
-                                                conveniently located next to
-                                                major Universities, Colleges,
-                                                and big companies, such as
-                                                Google, Toyota, Research in
-                                                Motion, OpenText, Manulife,
-                                                Sunlife, and many more. <br />
-                                                <br />
-                                                &#x2794; All our locations are
-                                                easily accessible by public
-                                                transportation and conveniently
-                                                located near commercial
-                                                districts and boutique shops.{' '}
-                                                <br />
-                                                <br />
-                                                &#x2794; Members get access to
-                                                amenities such as coffee, 24/7
-                                                space access, printing services,
-                                                daily cleaning, mailing services
-                                                access to conference rooms and
-                                                much more.
-                                            </p>
+                                            {/* <p className="text-branding-white/70 mb-6"> */}
+                                            <ul className='text-branding-white/70 mb-6 list-disc list-inside '>
+                                            <li>{"SPUR emphasizes both community and convenience."}</li>
+                                            <li>{"We offer bespoke custom spaces for startups, SME's, and Fortune 500's."}</li>
+                                            <li>{"With several locations throughout Kitchener-Waterloo, we are conveniently located next to major universities, colleges, and leading companies such as Google, Toyota, Research in Motion, OpenText, Manulife, Sunlife, and many more."}</li>
+                                            <li>{"All our locations are easily accessible via plane, car, trains, and public transportation and located near key and core commercial districts."}</li>
+                                            </ul>
                                         </div>
 
                                         <div className="space-y-5">
@@ -333,7 +297,7 @@ export default function Locations() {
 
                                             <div>
                                                 <h4 className="text-sm font-medium text-branding-white/90 mb-2">
-                                                    Available Spaces
+                                                    Spaces
                                                 </h4>
                                                 <div className="flex flex-wrap gap-2">
                                                     {featuredCity.spaces.map(
@@ -435,7 +399,7 @@ export default function Locations() {
                                                         Facility Size
                                                     </h4>
                                                     <span className="text-branding-orange font-bold">
-                                                        {city.sqft} sq ft
+                                                        {city.sqft} sq. ft
                                                     </span>
                                                 </div>
 
@@ -457,7 +421,7 @@ export default function Locations() {
 
                                             <div>
                                                 <h4 className="text-sm font-medium text-branding-white/90 mb-2">
-                                                    Available Spaces
+                                                    Spaces
                                                 </h4>
                                                 <div className="flex flex-wrap gap-2">
                                                     {city.spaces.map(
@@ -502,10 +466,7 @@ export default function Locations() {
 
                     <div className="text-center space-y-8 max-w-3xl mx-auto">
                         <p className="text-branding-white/80 text-lg">
-                            Our facilities are designed to meet the demanding
-                            requirements of AI and quantum computing, with
-                            expandable capacity to support our clients' growth
-                            needs and specialized infrastructure.
+                            Our facilities are designed to meet the demanding requirements of AI and quantum computing, with expandable capacity to support our needs and specialized infrastructure.
                         </p>
                     </div>
                 </div>

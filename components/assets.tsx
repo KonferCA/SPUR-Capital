@@ -9,7 +9,7 @@ const assets = [
     {
         title: '$1B+ Assets Under Management',
         description:
-            '6 Operational Datacenters with strategic locations in key markets. Currently, all data centers are leased to 95% occupancy.',
+            '6 Operational Datacenters with strategic locations in key markets. Currently, all data centers are leased to 100% occupancy.',
         icon: Building2,
         badge: 'Property',
     },
@@ -46,9 +46,7 @@ export default function Assets() {
                         <span className="block w-16 h-1 bg-branding-orange mt-4 mx-auto rounded-full" />
 
                         <p className="mx-auto max-w-[800px] text-branding-white/80 text-xl sm:text-2xl">
-                            SPUR manages a growing portfolio of data center
-                            assets, delivering exceptional value through
-                            strategic acquisitions.
+                            SPUR manages a growing portfolio of data center assets, delivering exceptional value through strategic acquisitions.
                         </p>
                     </div>
 
@@ -85,11 +83,7 @@ export default function Assets() {
 
                     <div className="text-center space-y-6 max-w-3xl mx-auto">
                         <p className="text-branding-white/80 text-lg">
-                            Our growth strategy combines disciplined capital
-                            allocation with technical expertise, allowing us to
-                            deliver exceptional returns for our investors while
-                            meeting the growing demand for advanced computing
-                            infrastructure.
+                            Our growth strategy combines disciplined capital allocation with technical expertise, allowing us to deliver exceptional returns while meeting the growing demand for advanced computing infrastructure.
                         </p>
 
                         <div className="pt-4">

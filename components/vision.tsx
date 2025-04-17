@@ -22,15 +22,13 @@ const features = [
     },
     {
         name: 'Strategic Acquisitions',
-        description:
-            'Rapidly converting underutilized commercial and industrial real estate into state-of-the-art data centers, reducing development time and costs while maximizing value creation.',
+        description: 'Rapidly converting underutilized commercial and industrial real estate into state-of-the-art data centers, reducing development time and costs while maximizing value creation.',
         icon: Shield,
         badge: 'Strategy',
     },
     {
         name: 'Dual Growth',
-        description:
-            'Enabling investors to benefit from both real estate appreciation and emerging tech market growth through a diversified approach that balances stable assets with high-growth potential.',
+        description: 'Benefit from both real estate appreciation and emerging tech market growth through a diversified approach that balances stable assets with high-growth potential.',
         icon: Zap,
         badge: 'Investment',
     },
