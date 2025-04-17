@@ -24,13 +24,6 @@ import Cloudwifi from '@/public/assets/partners/cloudwifi.png';
 import Alchemy from '@/public/assets/partners/alchemy.svg';
 import Generac from '@/public/assets/partners/generac.png';
 import DirectGlobal from '@/public/assets/partners/direct-global.png';
-import FareEats from '@/public/assets/partners/fare-eats.png';
-import Nicoya from '@/public/assets/partners/nicoya.png';
-import Crawford from '@/public/assets/partners/crawford.png';
-import Molex from '@/public/assets/partners/molex.png';
-import MagnetForensics from '@/public/assets/partners/magnet.png';
-import WSIB from '@/public/assets/partners/wsib.svg';
-import Konfer from '@/public/assets/partners/konfer.svg';
 import Partnerships from '@/public/assets/partnerships.jpg';
 
 import { log } from 'console';
@@ -135,50 +128,6 @@ const partners = [
         categories: ['Logistics'],
         description: 'Global logistics and supply chain solutions',
         url: 'Allow purchasers to leverage their collective purchasing power.',
-    },
-    {
-        name: 'Fare Eats',
-        logo: FareEats,
-        categories: ['Food'],
-        description: 'Food delivery and logistics solutions.',
-        url: 'https://fareeats.com/',
-    },
-    {
-        name: 'Nicoya',
-        logo: Nicoya,
-        categories: [],
-        description: 'Empower scientists with accessible SPR instrumentation.',
-        url: 'https://nicoyalife.com/',
-    },
-    {
-        name: 'Crawford',
-        logo: Crawford,
-        categories: ['Insurance'],
-        description: 'Global claims management and risk solutions.',
-    },
-    {
-        name: 'Molex',
-        logo: Molex,
-        categories: ['Engineering'],
-        description: 'Advanced physical and digital security solutions.',
-    },
-    {
-        name: 'Magnet Forensics',
-        logo: MagnetForensics,
-        categories: ['Engineering', 'Cybersecurity', 'Software'],
-        description: 'Digital forensics and incident response software.',
-    },
-    {
-        name: 'WSIB Ontario',
-        logo: WSIB,
-        categories: ['Insurance'],
-        description: 'Ontario Workplace Safety and Insurance Board.',
-    },
-    {
-        name: 'Konfer',
-        logo: Konfer,
-        categories: ['Logistics', 'Software'],
-        description: 'Logistical partnership and software solutions.',
     },
 ];
 
