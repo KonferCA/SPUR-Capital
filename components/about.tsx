@@ -231,7 +231,7 @@ export default function About() {
                                 <Card className="bg-background/30 border-branding-white/10 backdrop-blur-sm">
                                     <CardContent className="p-6 flex flex-col justify-center items-center">
                                         <h3 className="text-3xl font-bold text-branding-orange mb-2">
-                                            2M+ sq
+                                            2M+
                                         </h3>
 
                                         <p className="text-branding-white/70 text-lg text-center">
