@@ -231,11 +231,11 @@ export default function About() {
                                 <Card className="bg-background/30 border-branding-white/10 backdrop-blur-sm">
                                     <CardContent className="p-6 flex flex-col justify-center items-center">
                                         <h3 className="text-3xl font-bold text-branding-orange mb-2">
-                                            2M+
+                                            2M+ sq
                                         </h3>
 
                                         <p className="text-branding-white/70 text-lg text-center">
-                                            Square Feet of Data Center Space
+                                            Square Feet of Tech Space
                                         </p>
                                     </CardContent>
                                 </Card>
