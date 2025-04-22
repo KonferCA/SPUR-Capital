@@ -111,7 +111,7 @@ export default function Footer() {
                             </Link>
                         </div> */}
 
-                        <div className="flex gap-4 justify-center items-center">
+                        {/* <div className="flex gap-4 justify-center items-center">
                             <p className="text-branding-white/50 text-sm">
                                 Made & Designed by{' '}
                                 <a
@@ -121,7 +121,7 @@ export default function Footer() {
                                     Konfer
                                 </a>
                             </p>
-                        </div>
+                        </div> */}
                     </div>
                 </div>
             </div>
