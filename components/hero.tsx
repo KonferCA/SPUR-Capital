@@ -69,7 +69,7 @@ export default function Hero() {
                         <div className="grid grid-cols-3 gap-3 sm:gap-6 pt-6 lg:pt-8 border-t border-branding-white/10">
                             <div className="text-center lg:text-left">
                                 <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-branding-orange">
-                                    $500M+
+                                    $1B+
                                 </p>
                                 <p className="text-sm sm:text-lg text-branding-white/70">
                                     Assets Under Management
