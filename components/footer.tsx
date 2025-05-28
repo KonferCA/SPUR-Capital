@@ -23,7 +23,7 @@ export default function Footer() {
                             <p className="text-branding-white/70">
                                 SPUR is redefining how cities implement smart
                                 infrastructure with decentralized funding models
-                                and sustainable technology solutions.
+                                and technology solutions.
                             </p>
                         </div>
 

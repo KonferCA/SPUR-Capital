@@ -87,7 +87,7 @@ export default function Hero() {
 
                             <div className="text-center lg:text-left">
                                 <p className="text-xl sm:text-2xl lg:text-3xl font-bold text-branding-orange">
-                                    4
+                                    6
                                 </p>
                                 <p className="text-sm sm:text-lg text-branding-white/70">
                                     Operational Centers

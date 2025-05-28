@@ -12,7 +12,7 @@ const roboto = Roboto({
 export const metadata: Metadata = {
     title: 'SPUR Capital - Spurring the Future Funding of Decentralized Smart City Infrastructure ',
     description:
-        'SPUR is redefining how cities implement smart infrastructure with decentralized funding models and sustainable technology solutions.',
+        'SPUR is redefining how cities implement smart infrastructure with decentralized funding models and technology solutions.',
     keywords: [
         'SPUR Capital',
         'SPUR Innovation',

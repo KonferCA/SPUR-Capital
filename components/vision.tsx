@@ -52,7 +52,7 @@ export default function Vision() {
 
                         <p className="mx-auto max-w-[800px] text-branding-white/80 text-xl sm:text-2xl">
                             SPUR is pioneering the next generation of
-                            sustainable, scalable AI and quantum computing
+                            high-performance computing, scalable AI, and quantum computing
                             infrastructure.
                         </p>
                     </div>
